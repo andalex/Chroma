@@ -1,0 +1,8 @@
+ <svg viewBox="326 -1 76 77" version="1.1" xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink">
+            <g id="Group" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(326.000000, 0.000000)">
+                <polygon id="Path-3" fill-opacity="0.6" fill="#D8D8D8" points="0.306640625 0.435546875 74.8888101 75.0177163 74.8888101 0.433274776"></polygon>
+                <polyline class="popover-open" id="Path-2" opacity="0.29739972" transform="translate(66.316480, 9.005605) rotate(-135.000000) translate(-66.316480, -9.005605) "
+                    points="58.3164799 4.88249935 66.5626911 13.1287106 74.3164799 4.88249935"></polyline>
+            </g>
+        </svg>

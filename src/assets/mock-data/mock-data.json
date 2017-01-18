@@ -1,0 +1,342 @@
+[
+  {
+    "palHash": "b4ea4",
+    "palette": [
+      "#F8B447",
+      "#F88651",
+      "#383A3F",
+      "#1F2124"
+    ],
+    "positions": [
+      "4rem",
+      "7rem",
+      "9.5rem",
+      "12.5rem"
+    ],
+    "identifierPosition": "4rem",
+    "fontPalettePositions": [
+      ".25rem",
+      "1.75rem",
+      "3.25rem",
+      "4.75rem"
+    ],
+    "fontPaletteIdentifierPosition": ".25rem",
+    "currentColor": "#fff",
+    "fontColor": "#1F2124",
+    "currentFontStyles": "Roboto",
+    "fontInitialValue": 10,
+    "fontStyles": {
+      "hOne": "2.5em",
+      "hThree": "1.5em",
+      "hTwo": "2em",
+      "p": "1em",
+      "fontScale": "1.0"
+    }
+  },
+  {
+    "palHash": "a7ed5",
+    "palette": [
+      "#E71D36",
+      "#2EC4B6",
+      "#EFFFE9",
+      "#011627"
+    ],
+    "positions": [
+      "4rem",
+      "7rem",
+      "9.5rem",
+      "12.5rem"
+    ],
+    "identifierPosition": "4rem",
+    "fontPalettePositions": [
+      ".25rem",
+      "1.75rem",
+      "3.25rem",
+      "4.75rem"
+    ],
+    "fontPaletteIdentifierPosition": ".25rem",
+    "currentColor": "#fff",
+    "fontColor": "#1F2124",
+    "currentFontStyles": "Roboto",
+    "fontInitialValue": 10,
+    "fontStyles": {
+      "hOne": "2.5em",
+      "hThree": "1.5em",
+      "hTwo": "2em",
+      "p": "1em",
+      "fontScale": "1.0"
+    }
+  },
+  {
+    "palHash": "e7872",
+    "palette": [
+      "#AF4034",
+      "#3E4348",
+      "#C65146",
+      "#EC6A5C"
+    ],
+    "positions": [
+      "4rem",
+      "7rem",
+      "9.5rem",
+      "12.5rem"
+    ],
+    "identifierPosition": "4rem",
+    "fontPalettePositions": [
+      ".25rem",
+      "1.75rem",
+      "3.25rem",
+      "4.75rem"
+    ],
+    "fontPaletteIdentifierPosition": ".25rem",
+    "currentColor": "#fff",
+    "fontColor": "#1F2124",
+    "currentFontStyles": "Roboto",
+    "fontInitialValue": 10,
+    "fontStyles": {
+      "hOne": "2.5em",
+      "hThree": "1.5em",
+      "hTwo": "2em",
+      "p": "1em",
+      "fontScale": "1.0"
+    }
+  },
+  {
+    "palHash": "e4662",
+    "palette": [
+      "#ff7473",
+      "#ffc952",
+      "#47b8e0",
+      "#34314c"
+    ],
+    "positions": [
+      "4rem",
+      "7rem",
+      "9.5rem",
+      "12.5rem"
+    ],
+    "identifierPosition": "4rem",
+    "fontPalettePositions": [
+      ".25rem",
+      "1.75rem",
+      "3.25rem",
+      "4.75rem"
+    ],
+    "fontPaletteIdentifierPosition": ".25rem",
+    "currentColor": "#fff",
+    "fontColor": "#1F2124",
+    "currentFontStyles": "Roboto",
+    "fontInitialValue": 10,
+    "fontStyles": {
+      "hOne": "2.5em",
+      "hThree": "1.5em",
+      "hTwo": "2em",
+      "p": "1em",
+      "fontScale": "1.0"
+    }
+  },
+  {
+    "palHash": "ae8bf",
+    "palette": [
+      "#F0E5DE",
+      "#ABD0CE",
+      "#7C7877",
+      "#D9D4CF"
+    ],
+    "positions": [
+      "4rem",
+      "7rem",
+      "9.5rem",
+      "12.5rem"
+    ],
+    "identifierPosition": "4rem",
+    "fontPalettePositions": [
+      ".25rem",
+      "1.75rem",
+      "3.25rem",
+      "4.75rem"
+    ],
+    "fontPaletteIdentifierPosition": ".25rem",
+    "currentColor": "#fff",
+    "fontColor": "#1F2124",
+    "currentFontStyles": "Roboto",
+    "fontInitialValue": 10, 
+    "fontStyles": {
+      "hOne": "2.5em",
+      "hThree": "1.5em",
+      "hTwo": "2em",
+      "p": "1em",
+      "fontScale": "1.0"
+    }
+  },
+  {
+    "palHash": "04f24",
+    "palette": [
+      "#FBFFB9",
+      "#FDD692",
+      "#EC7357",
+      "#754F44"
+    ],
+    "positions": [
+      "4rem",
+      "7rem",
+      "9.5rem",
+      "12.5rem"
+    ],
+    "identifierPosition": "4rem",
+    "fontPalettePositions": [
+      ".25rem",
+      "1.75rem",
+      "3.25rem",
+      "4.75rem"
+    ],
+    "fontPaletteIdentifierPosition": ".25rem",
+    "currentColor": "#fff",
+    "fontColor": "#1F2124",
+    "currentFontStyles": "Roboto",
+    "fontInitialValue": 10,
+    "fontStyles": {
+      "hOne": "2.5em",
+      "hThree": "1.5em",
+      "hTwo": "2em",
+      "p": "1em",
+      "fontScale": "1.0"
+    }
+  },
+  {
+    "palHash": "8fdad",
+    "palette": [
+      "#5CAB7D",
+      "#5A9367",
+      "#44633F",
+      "#3F4B3B"
+    ],
+    "positions": [
+      "4rem",
+      "7rem",
+      "9.5rem",
+      "12.5rem"
+    ],
+    "identifierPosition": "4rem",
+    "fontPalettePositions": [
+      ".25rem",
+      "1.75rem",
+      "3.25rem",
+      "4.75rem"
+    ],
+    "fontPaletteIdentifierPosition": ".25rem",
+    "currentColor": "#fff",
+    "fontColor": "#1F2124",
+    "currentFontStyles": "Roboto",
+    "fontInitialValue": 10, 
+    "fontStyles": {
+      "hOne": "2.5em",
+      "hThree": "1.5em",
+      "hTwo": "2em",
+      "p": "1em",
+      "fontScale": "1.0"
+    }
+  },
+  {
+    "palHash": "52667",
+    "palette": [
+      "#F16B6F",
+      "#C5C6B6",
+      "#AACD6E",
+      "#3C3530"
+    ],
+    "positions": [
+      "4rem",
+      "7rem",
+      "9.5rem",
+      "12.5rem"
+    ],
+    "identifierPosition": "4rem",
+    "fontPalettePositions": [
+      ".25rem",
+      "1.75rem",
+      "3.25rem",
+      "4.75rem"
+    ],
+    "fontPaletteIdentifierPosition": ".25rem",
+    "currentColor": "#fff",
+    "fontColor": "#1F2124",
+    "currentFontStyles": "Roboto",
+    "fontInitialValue": 10,
+    "fontStyles": {
+      "hOne": "2.5em",
+      "hThree": "1.5em",
+      "hTwo": "2em",
+      "p": "1em",
+      "fontScale": "1.0"
+    }
+  },
+  {
+    "palHash": "abf0a",
+    "palette": [
+      "#77AAAD",
+      "#6E7783",
+      "#D8E6E7",
+      "#9DC3C1"
+    ],
+    "positions": [
+      "4rem",
+      "7rem",
+      "9.5rem",
+      "12.5rem"
+    ],
+    "identifierPosition": "4rem",
+    "fontPalettePositions": [
+      ".25rem",
+      "1.75rem",
+      "3.25rem",
+      "4.75rem"
+    ],
+    "fontPaletteIdentifierPosition": ".25rem",
+    "currentColor": "#fff",
+    "fontColor": "#1F2124",
+    "currentFontStyles": "Roboto",
+    "fontInitialValue": 10,
+    "fontStyles": {
+      "hOne": "2.5em",
+      "hThree": "1.5em",
+      "hTwo": "2em",
+      "p": "1em",
+      "fontScale": "1.0"
+    }
+  },
+  {
+    "palHash": "842fd",
+    "palette": [
+      "#f9c00c",
+      "#00b9f1",
+      "#7200da",
+      "#f9320c"
+    ],
+    "positions": [
+      "4rem",
+      "7rem",
+      "9.5rem",
+      "12.5rem"
+    ],
+    "identifierPosition": "4rem",
+    "fontPalettePositions": [
+      ".25rem",
+      "1.75rem",
+      "3.25rem",
+      "4.75rem"
+    ],
+    "fontPaletteIdentifierPosition": ".25rem",
+    "currentColor": "#fff",
+    "fontColor": "#1F2124",
+    "currentFontStyles": "Roboto",
+    "fontInitialValue": 10,
+    "fontStyles": {
+      "hOne": "2.5em",
+      "hThree": "1.5em",
+      "hTwo": "2em",
+      "p": "1em",
+      "fontScale": "1.0"
+    }
+  }
+]

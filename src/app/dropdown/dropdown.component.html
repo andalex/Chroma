@@ -1,0 +1,42 @@
+<div class="dropdown">
+    <div fxFlexLayout="row" fxLayoutAlign="center center">
+        <div fxFlex class="dropdown-content">
+            <p (click)='toggle()' class="small-info-text">+ ABOUT +</p>
+        </div>
+    </div>
+
+    <div [style.height]="dropDownHeight" [style.padding]="dropDownPadding" fxFlexLayout="row" fxLayoutAlign="center" class="dropdown-content">
+        <div fxFlex  *ngIf="dropDownExpanded">
+            <h1>Chroma</h1>
+            <p>An interactive palette tool for font and color pairings.</p>
+            <div class="chroma-example-gif"></div>
+            <p><strong>A lot of my favorite places to go for palettes did not have a quick way to implement in web projects.</strong></p>
+            <p><br>I like to see how colors will look with font, so I think that should be a part of the selection process.</p>
+            <h3>Technology</h3>
+            <p>Angular2, TypeScript, WebPack.</p>
+            <h3>Features in progress</h3>
+            <p>SCSS/CSS Generation</p>
+            <p>Photo upload to palette</p>
+            <p>User palette creation</p>
+            <p>Full font style options</p>
+            <p>Add cards to user stack</p>
+            <p>Shareable
+             cards</p>
+            <p>Expandable card for large typography sampling</p>
+            <p>Click to edit typography elements</p>
+            <br>
+            <p>Check out the project on <a href="https://github.com/andalex/angular2-webpack-starter/tree/pal-ui-prototype"><strong>github</strong></a>
+            </p>
+            <br>
+
+            <svg (click)='toggle()' width="2rem" id="contract-dropdown" viewBox="123 280 18 10" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink">
+                <!-- Generator: Sketch 41.2 (35397) - http://www.bohemiancoding.com/sketch -->
+                <desc>Created with Sketch.</desc>
+                <defs></defs>
+                <polyline id="Path-2" stroke="#3E4348" stroke-width="1" fill="none" opacity="0.29739972" transform="translate(131.847597, 284.928067) scale(-1, -1) translate(-131.847597, -284.928067) "
+                    points="123.847597 280.804962 132.093809 289.051173 139.847597 280.804962"></polyline>
+            </svg>
+        </div>
+    </div>
+</div>

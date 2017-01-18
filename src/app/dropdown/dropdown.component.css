@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css?family=Inconsolata');
+@import url('https://fonts.googleapis.com/css?family=Oswald:300,400,700&subset=latin-ext');
+
+
+.center-text {
+    text-align: center;
+}
+.dropdown {
+    font-family: 'Inconsolata', monospace;
+}
+h1,h2,h3 {
+    color: rgba(170,170,170, 0.6);
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: .2em;
+     font-family: 'Oswald', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+ p {
+      color: rgba(170,170,170, 1);
+       font-family: 'Inconsolata', monospace;
+       font-weight: 500;
+ }
+strong {
+    font-style: italic;
+}
+a {
+    text-transform: uppercase;
+    color: rgba(170,170,170, 1);
+    text-decoration: underline;
+
+}
+#contract-dropdown {
+    position: relative;
+    left: 9.25rem;
+    cursor: pointer;
+}
+.small-info-text {
+    font-size: 1em;
+    padding: 0;
+    line-height: .6em;
+    text-align: center;
+    cursor: pointer;
+}
+
+.dropdown-content {
+      transition: all .5s ease;
+      padding:1rem;
+}
+.chroma-example-gif {
+   background: url("./chroma3.gif");
+   background-repeat: no-repeat;
+   background-size: cover;
+    height: 17.8rem;
+    width: 18rem;
+    margin: 0 auto;
+}

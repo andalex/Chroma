@@ -1,0 +1,583 @@
+/*meta styles*/
+html, body{
+  height: 100%;
+}
+.pal-container {
+      max-width: 1024px;
+    margin: 0 auto;
+}
+
+/*styles for home content only*/
+
+html,
+body,
+.viewport {
+    font-family: 'Oswald', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: #131533;
+    background: white;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+*:focus {
+    outline: none;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+}
+.portfolio {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+@import url('https://fonts.googleapis.com/css?family=Oswald:300,400,700&subset=latin-ext');
+.plain-text {
+    font-family: "Courier New", Courier, monospace;
+}
+.center-text {
+  text-align: center !important;
+}
+.pallete-card {
+    height: 20rem;
+    width: 20rem;
+    margin: 1rem auto !important;
+    padding: 0 !important;
+}
+.left-panel,
+.center-panel,
+.right-panel,
+.left-panel-expanded,
+.center-panel-expanded,
+.right-panel-expanded {
+    height: 20rem;
+    transition: all 0.3s ease;
+}
+
+.white-bg {
+background-color: #fff;
+}
+.grey-bg {
+background-color: rgba(170,170,170, .1);
+}
+.left-panel {
+
+}
+.left-panel-expanded {
+   
+}
+.center-panel {
+    background-size: 300% 300%;
+   
+}
+.center-panel-expanded {
+   
+}
+.octo-palette {
+    position: relative;
+    height: 12rem;
+    width: 5rem;
+    top: 3.5rem;
+    left: 2rem;
+    transition: all .7s ease;
+}
+.octo-palette-expanded {
+    position: relative;
+    height: 12rem;
+    width: 5rem;
+    top: 3.5rem;
+    left: 7rem;
+    transition: all .7s ease;
+}
+.octo {
+    cursor: pointer;
+}
+.color-picker {
+    position: relative;
+    top: 2rem;
+    left: 2rem;
+    color: #D8D8D8;
+}
+.popover {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 2rem;
+    z-index: 104;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.popover-lg {
+    position: relative;
+    top: -1px;
+    width: 4rem;
+    left: 61.5%;
+    z-index: 104;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.font-popover {
+    position: relative;
+    top: -2rem;
+    left: 0;
+    width: 2rem;
+    z-index: 104;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.css-popover {
+    position: relative;
+    top: -4rem;
+    left: 6.1rem;
+    width: 4rem;
+    z-index: 104;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+
+.font-popover-expanded {
+    position: relative;
+     top: 8.2rem;
+    left: -2.8rem;
+     width: 4rem;
+    z-index: 104;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.hidden {
+    display: none;
+}
+.pallete-card {
+    margin: 2rem;
+}
+.popover-close {
+    stroke: #3E4348;
+    transform: rotateY(1deg);
+}
+.popover-open {
+    stroke: #3E4348;
+}
+.sample-text {
+    margin: 0;
+    text-align: center;
+}
+.sample-text-type-panel {
+    margin: 0;
+    text-align: left;
+}
+
+.sample-text-type-panel.title-1 {
+font-size: 1.75em;
+}
+.sample-text-type-panel.title-2 {
+  font-size: 1.4em;
+}
+.sample-text-type-panel.title-3 {
+  font-size: 1.04em;
+}
+.sample-text-type-panel.paragraph {
+  font-size: 0.7em;
+}
+.font-ui-label-bar {
+    color: #aaaaaa;
+    background: none;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 3rem;
+}
+.font-ui-label {
+    font-size: 8px;
+    font-weight: 100;
+    text-align: center;
+    margin: 0;
+}
+.font-size {
+    text-align: center;
+    height: 2rem;
+    font-weight: 100;
+}
+.font-selector {
+    text-align: center;
+    height: 2rem;
+    font-weight: 100;
+   
+}
+.sample-text-row {
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.font-up-down {
+    height: 100%;
+    cursor: pointer;
+        align-items: center;
+    justify-content: center;
+}
+.light {
+    background-color: #efefef;
+}
+.white {
+    background-color: rgba(170,170,170, .1);
+     border-left: 1px dotted rgba(120,120,120,.1);;
+    height: 2rem;
+}
+.select-content {
+    height: 2.3rem;
+}
+.select-content-font {
+    height: 2rem;
+      align-items: center;
+    justify-content: center;
+}
+font-palette-identifier {
+ height: .3rem;
+}
+.font-selector {
+    height: 0.625rem;
+}
+.font-select{
+     height: 1.25rem;
+    align-items: center;
+    justify-content: center;
+    padding: .3rem;
+     cursor: pointer;
+}
+.google-font-selector {
+       font-size: .5em;
+    margin: 0;
+    text-transform: uppercase;
+    font-weight: 300;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.font-scrollbox {
+  overflow-y: scroll;
+     height:5rem;
+         height: 6.75rem;
+    margin-top: 0;
+        border-left: 1px dotted rgba(0,0,0,.1);
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent; 
+}
+::-webkit-scrollbar-thumb {
+    background:transparent;
+}
+.font-size-text {
+    font-size: 1rem;
+    text-align: center;
+    color: #aaaaaa;
+    line-height: 1rem;
+        margin-top: .2rem;
+}
+.font-selected {
+         height: 1.25rem;
+    align-items: center;
+    justify-content: center;
+    padding: .3rem;
+  background-color: rgba(0,0,0,.1);
+}
+
+.rnd-crn {
+    border-bottom-right-radius: 2px;
+}
+
+.font-color-selector {
+    height: 2rem;
+}
+.font-color-box {
+    height: 100%;
+    cursor: pointer;
+}
+/*material override*/
+
+
+
+.color-identifier {
+    position: relative;
+    top: 4rem;
+    width: 1rem;
+    left: 6.5rem;
+    opacity: .6;
+    transition: all 0.3s ease;
+}
+.color-identifier-expanded {
+ position: relative;
+    top: 4rem;
+    width: 1rem;
+    left: 1.5rem;
+    opacity: .6;
+    transition: all 0.3s ease;
+}
+.font-color-icon {
+    position: relative;
+    top: 0rem;
+    width: 12.5%;
+    left: 0;
+    padding-left: 0.25rem;
+    transition: all 0.3s ease;
+}
+
+.incrementer {
+    min-width: 0 !important;
+    height: 80%;
+    width: 80%;
+    margin: 10% 0 0 0 !important;
+     background-color: #efefef;
+}
+.incrementer-lg {
+    min-width: 0 !important;
+     height: 80%;
+    width: 90%;
+    margin: 2.5% 0 10% 0 !important;
+     background-color: #efefef;
+}
+
+.small-info-text {
+      font-size: 0.3em;
+    padding: 0 0 0 .6em;
+    line-height: .6em;
+    text-align: left;
+}
+
+.typo-panel {
+  height: 100%;
+}
+
+.css-selection-panel {
+  height: 100%;
+  
+}
+.css-selection-button {
+    width: 9rem;
+    height: 9rem;
+    margin: .5rem;
+}
+   
+.offset-label {
+  height: 10rem;
+}
+
+.css-button-text {
+    font-size: 3em;
+    text-transform: uppercase;
+    font-weight: 900;
+    color: rgb(170,170,170);
+    letter-spacing: 0em;
+}
+/*FONTS*/
+
+
+.Roboto {
+  font-family: "Roboto", sans-serif;
+  font-style:normal;
+}
+.OpenSans {
+  font-family: "Open Sans", sans-serif;
+  font-style:normal;
+}
+.Slabo27px {
+  font-family: "Slabo 27px", serif;
+  font-style:normal;
+}
+.Lato {
+  font-family: "Lato", sans-serif;
+  font-style:normal;
+}
+.RobotoCondensed {
+  font-family: "Roboto Condensed", sans-serif;
+  font-style:normal;
+}
+.Oswald {
+  font-family: "Oswald", sans-serif;
+  font-style:normal;
+}
+.SourceSansPro {
+  font-family: "Source Sans Pro", sans-serif;
+  font-style:normal;
+}
+.Montserrat {
+  font-family: "Montserrat", sans-serif;
+  font-style:normal;
+}
+.Raleway {
+  font-family: "Raleway", sans-serif;
+  font-style:normal;
+}
+.PTSans {
+  font-family: "PT Sans", sans-serif;
+  font-style:normal;
+}
+.Merriweather {
+  font-family: "Merriweather", serif;
+  font-style:normal;
+}
+.RobotoSlab {
+  font-family: "Roboto Slab", serif;
+  font-style:normal;
+}
+.Lora {
+  font-family: "Lora", serif;
+  font-style:normal;
+}
+.OpenSansCondensed {
+  font-family: "Open Sans Condensed", sans-serif;
+  font-style:normal;
+}
+.DroidSans {
+  font-family: "Droid Sans", sans-serif;
+  font-style:normal;
+}
+.Ubuntu {
+  font-family: "Ubuntu", sans-serif;
+  font-style:normal;
+}
+.DroidSerif {
+  font-family: "Droid Serif", serif;
+  font-style:normal;
+}
+.PlayfairDisplay {
+  font-family: "Playfair Display", serif;
+  font-style:normal;
+}
+.Arimo {
+  font-family: "Arimo", sans-serif;
+  font-style:normal;
+}
+.PTSansNarrow {
+  font-family: "PT Sans Narrow", sans-serif;
+  font-style:normal;
+}
+.TitilliumWeb {
+  font-family: "Titillium Web", sans-serif;
+  font-style:normal;
+}
+.NotoSans {
+  font-family: "Noto Sans", sans-serif;
+  font-style:normal;
+}
+.PTSerif {
+  font-family: "PT Serif", serif;
+  font-style:normal;
+}
+.Muli {
+  font-family: "Muli", sans-serif;
+  font-style:normal;
+}
+.IndieFlower {
+  font-family: "Indie Flower", handwriting;
+  font-style:normal;
+}
+.Bitter {
+  font-family: "Bitter", serif;
+  font-style:normal;
+}
+.Dosis {
+  font-family: "Dosis", sans-serif;
+  font-style:normal;
+}
+.Poppins {
+  font-family: "Poppins", sans-serif;
+  font-style:normal;
+}
+.Catamaran {
+  font-family: "Catamaran", sans-serif;
+  font-style:normal;
+}
+.FjallaOne {
+  font-family: "Fjalla One", sans-serif;
+  font-style:normal;
+}
+.Oxygen {
+  font-family: "Oxygen", sans-serif;
+  font-style:normal;
+}
+.Inconsolata {
+  font-family: "Inconsolata", monospace;
+  font-style:normal;
+}
+.Hind {
+  font-family: "Hind", sans-serif;
+  font-style:normal;
+}
+.Lobster {
+  font-family: "Lobster", display;
+  font-style:normal;
+}
+.Cabin {
+  font-family: "Cabin", sans-serif;
+  font-style:normal;
+}
+.Arvo {
+  font-family: "Arvo", serif;
+  font-style:normal;
+}
+.Anton {
+  font-family: "Anton", sans-serif;
+  font-style:normal;
+}
+.NotoSerif {
+  font-family: "Noto Serif", serif;
+  font-style:normal;
+}
+.YanoneKaffeesatz {
+  font-family: "Yanone Kaffeesatz", sans-serif;
+  font-style:normal;
+}
+.BreeSerif {
+  font-family: "Bree Serif", serif;
+  font-style:normal;
+}
+.Nunito {
+  font-family: "Nunito", sans-serif;
+  font-style:normal;
+}
+.CrimsonText {
+  font-family: "Crimson Text", serif;
+  font-style:normal;
+}
+.LibreBaskerville {
+  font-family: "Libre Baskerville", serif;
+  font-style:normal;
+}
+.JosefinSans {
+  font-family: "Josefin Sans", sans-serif;
+  font-style:normal;
+}
+.Abel {
+  font-family: "Abel", sans-serif;
+  font-style:normal;
+}
+.GloriaHallelujah {
+  font-family: "Gloria Hallelujah", handwriting;
+  font-style:normal;
+}
+.CormorantGaramond {
+  font-family: "Cormorant Garamond", serif;
+  font-style:normal;
+}
+.AbrilFatface {
+  font-family: "Abril Fatface", display;
+  font-style:normal;
+}
+.Karla {
+  font-family: "Karla", sans-serif;
+  font-style:normal;
+}
+.UbuntuCondensed {
+  font-family: "Ubuntu Condensed", sans-serif;
+  font-style:normal;
+}
+.Exo2 {
+  font-family: "Exo 2", sans-serif;
+  font-style:normal;
+}

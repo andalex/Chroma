@@ -1,0 +1,32 @@
+.small-info-text {
+      font-size: 0.3em;
+    padding: 0 0 0 .6em;
+    line-height: .6em;
+    text-align: left;
+}
+
+.typo-panel {
+  height: 100%;
+}
+
+.css-selection-panel {
+  height: 100%;
+  
+}
+.css-selection-button {
+    width: 9rem;
+    height: 9rem;
+    margin: .5rem;
+}
+   
+.offset-label {
+  height: 10rem;
+}
+
+.css-button-text {
+    font-size: 3em;
+    text-transform: uppercase;
+    font-weight: 900;
+    color: rgb(170,170,170);
+    letter-spacing: 0em;
+}
