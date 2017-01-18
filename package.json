@@ -11,6 +11,7 @@
   "homepage": "https://github.com/angularclass/angular2-webpack-starter",
   "license": "MIT",
   "scripts": {
+    "dbserve": "nodemon server/server.js",
     "build:aot:prod": "npm run clean:dist && npm run clean:aot && webpack --config config/webpack.prod.js  --progress --profile --bail",
     "build:aot": "npm run build:aot:prod",
     "build:dev": "npm run clean:dist && webpack --config config/webpack.dev.js --progress --profile",
