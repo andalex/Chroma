@@ -1,0 +1,24 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "webpack app for pdx401",
+  "scripts": {
+    "start": "eval $(cat .env) nodemon server.js",
+    "test": "nodemon --exec 'mocha' test/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andalex/webpack"
+  },
+  "author": "Alex Anderson <and4alex@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/andalex/webpack/issues"
+  },
+  "dependencies": {
+
+  },
+  "devDependencies": {
+   
+  }
+}

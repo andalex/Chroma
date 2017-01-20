@@ -1,0 +1,72 @@
+[{
+    "song": "Sound & Color",
+    "artist": "Alabama Shakes",
+    "year": "2015" ,
+    "genre": "Rock",
+    "rating": "5",
+    "file": "http://localhost:3000/songs/soundcolor.m4a",
+    "img": "http://localhost:3000/artwork/testart.jpg"
+},
+{
+    "song": "Has This Hit",
+    "artist": "King Krule",
+    "year": "2013" ,
+    "genre": "Soul/other",
+    "rating": "4",
+    "file": "http://localhost:3000/songs/hasthishit.m4a",
+    "img": "http://localhost:3000/artwork/testart.jpg"
+},
+{
+    "song": "Solace",
+    "artist": "stolenSnares",
+    "year": "2015" ,
+    "genre": "Beats",
+    "rating": "3",
+    "file": "http://localhost:3000/songs/solace.mp3",
+    "img": "http://localhost:3000/artwork/testart.jpg"
+},
+{
+    "song": "Broth Tsunami",
+    "artist": "Ackrte",
+    "year": "2016" ,
+    "genre": "Beats",
+    "rating": "3",
+    "file": "http://localhost:3000/songs/brothtsunami.mp3",
+    "img": "http://localhost:3000/artwork/testart.jpg"
+},
+{
+    "song": "October Weekend",
+    "artist": "Mark Arkinson",
+    "year": "2015" ,
+    "genre": "Beats/Soul",
+    "rating": "5",
+    "file": "http://localhost:3000/songs/octoberweekend.mp3",
+    "img": "http://localhost:3000/artwork/testart.jpg"
+},
+{
+    "song": "Swimming Pool",
+    "artist": "Yuma X",
+    "year": "2015" ,
+    "genre": "Beats/Soul",
+    "rating": "4",
+    "file": "http://localhost:3000/songs/swimmingpool.mp3",
+    "img": "http://localhost:3000/artwork/testart.jpg"
+},
+{
+    "song": "This Night",
+    "artist": "Brassbastardz",
+    "year": "2009" ,
+    "genre": "Soul/other",
+    "rating": "5",
+    "file": "http://localhost:3000/songs/thisnight.mp3",
+    "img": "http://localhost:3000/artwork/testart.jpg"
+},
+{
+    "song": "When U Need Me",
+    "artist": "Mura Masa",
+    "year": "2015" ,
+    "genre": "Beats/Pop",
+    "rating": "5",
+    "file": "http://localhost:3000/songs/whenuneedme.mp3",
+    "img": "http://localhost:3000/artwork/testart.jpg"
+}]

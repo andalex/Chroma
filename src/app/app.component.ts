@@ -37,7 +37,7 @@ import { AppState } from './app.service';
                     </text>
                     <path d="M77,125.5 L123.389654,125.5" id="Path-4" stroke="#3E4348" stroke-width="3"></path>
                     <text id="An-interactive-palet" font-family="Oswald-Regular, Oswald" font-size="13" font-weight="normal" fill="#3E4348">
-                        <tspan x="35.699707" y="152">palette tool </tspan>
+                        <tspan x="35.699707" y="152">An Interactive Palette Tool </tspan>
                     </text>
                 </g>
             </svg>
@@ -49,7 +49,7 @@ import { AppState } from './app.service';
         <home></home>
 
         <div fxFlex>
-            <a href="https://github.com/andalex/angular2-webpack-starter">
+            <a href="https://github.com/andalex/Chroma">
                 <svg width="100%" height="12rem" viewBox="621 72 204 193" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                     <!-- Generator: Sketch 41.2 (35397) - http://www.bohemiancoding.com/sketch -->
                     <desc>Created with Sketch.</desc>
