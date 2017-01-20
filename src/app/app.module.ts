@@ -5,6 +5,8 @@ import { HttpModule } from '@angular/http';
 import { MaterialModule } from '@angular/material';
 import { FlexLayoutModule } from "@angular/flex-layout";
 
+import {EvenOddPipe} from './evenodd.pipe';
+
 import 'hammerjs';
 import {
   NgModule,
@@ -86,7 +88,8 @@ export class Safe {
     PaletteCardComponent,
     NoContentComponent,
     DropDownComponent,
-    Safe
+    Safe,
+    EvenOddPipe
   ],
   imports: [ // import Angular's modules
     BrowserModule,

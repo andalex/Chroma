@@ -9,12 +9,11 @@ export class PaletteService {
   constructor(private http: Http) {}
 
 
-  private baseUrl: string = './assets/mock-data';
-  private file: string = 'mock-data.json'
+  private baseUrl: string = 'http://localhost:8080';
+  private path: string = 'chroma'
 
   public getAll(): Observable<Palette> {
-    let requestUrl =  `${this.baseUrl}/${this.file}`
-
+    let requestUrl =  `${this.baseUrl}/${this.path}`;    
 
     return <Observable<Palette>>this.http.get(requestUrl)
       .map((res) => res.json())

@@ -8,7 +8,7 @@ import * as WebFont from 'webfontloader';
 import { PaletteService } from '../palette.service';
 
 @Component({
-  selector: 'home',
+  selector: 'palette',
   providers: [FontService, PaletteService],
   styleUrls: ['./palette-card.component.css'],
   templateUrl: './palette-card.component.html'

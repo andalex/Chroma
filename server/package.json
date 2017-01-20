@@ -16,9 +16,17 @@
     "url": "https://github.com/andalex/webpack/issues"
   },
   "dependencies": {
-
+    "bcryptjs": "^2.4.0",
+    "body-parser": "^1.16.0",
+    "chai": "^3.5.0",
+    "chai-http": "^3.0.0",
+    "cookie-parser": "^1.4.3",
+    "express": "^4.14.0",
+    "mongoose": "^4.7.7",
+    "morgan": "^1.7.0",
+    "path": "^0.12.7"
   },
   "devDependencies": {
-   
+    "nodemon": "^1.11.0"
   }
 }
