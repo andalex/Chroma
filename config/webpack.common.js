@@ -27,7 +27,7 @@ const ngcWebpack = require('ngc-webpack');
 const HMR = helpers.hasProcessFlag('hot');
 const AOT = helpers.hasNpmFlag('aot');
 const METADATA = {
-  title: 'Chroma An Interactive Palette tool',
+  title: '- C H R O M A -',
   baseUrl: '/',
   isDevServer: helpers.isWebpackDevServer()
 };

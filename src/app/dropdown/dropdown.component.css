@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Inconsolata');
+@import url('https://fonts.googleapis.com/css?family=Karla');
 @import url('https://fonts.googleapis.com/css?family=Oswald:300,400,700&subset=latin-ext');
 
 
@@ -6,7 +6,9 @@
     text-align: center;
 }
 .dropdown {
-    font-family: 'Inconsolata', monospace;
+    font-family: 'Karla', monospace;
+    font-size: .9em;
+    letter-spacing: .05em;
 }
 h1,h2,h3 {
     color: rgba(170,170,170, 0.6);
@@ -19,7 +21,7 @@ h1,h2,h3 {
 }
  p {
       color: rgba(170,170,170, 1);
-       font-family: 'Inconsolata', monospace;
+       font-family: 'Karla', monospace;
        font-weight: 500;
  }
 strong {

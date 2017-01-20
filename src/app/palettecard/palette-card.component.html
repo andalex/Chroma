@@ -17,7 +17,7 @@
             </g>
         </svg>
         <dropdown></dropdown>
-        <md-card class="pallete-card" fxLayout="row" fxLayoutAlign="center center" *ngFor="let colorsA of colorPalettes; let i = index"
+        <md-card class="pallete-card" fxLayout="row" fxLayoutAlign="center center" *ngFor="let colorsA of colorPalettes | evenOdd:true; let i = index"
             [style.background]="colorsA.typographyPanelExpanded ? colorsA.currentColor : '#fff'">
 
             <div *ngIf="colorsA.typographyPanelExpanded && !colorsA.cssPanelExpanded" class="typo-panel" [fxFlex]="colorsA.typographyPanelFlex"
@@ -239,7 +239,226 @@
         </md-card>
     </div>
     <div fxFlex="35%">
-       
+        <md-card class="pallete-card" fxLayout="row" fxLayoutAlign="center center" *ngFor="let colorsA of colorPalettes | evenOdd:false; let i = index"
+            [style.background]="colorsA.typographyPanelExpanded ? colorsA.currentColor : '#fff'">
+
+            <div *ngIf="colorsA.typographyPanelExpanded && !colorsA.cssPanelExpanded" class="typo-panel" [fxFlex]="colorsA.typographyPanelFlex"
+                fxLayout="row" fxLayoutAlign="center center" [ngClass]="currentFontStyles">
+                <div class="typo-panel" fxFlex="5%" [style.background]="colorsA.currentColor">
+                </div>
+                <div fxFlex="90%" [style.background]="colorsA.currentColor">
+                    <h1 class="sample-text-type-panel title-1" [style.color]="colorsA.fontColor">HEADING H1</h1>
+
+                    <p class="sample-text-type-panel paragraph" [style.color]="colorsA.fontColor"><strong>Pellentesque habitant morbi tristique</strong> senectus et netus et mal. Vestibulum tortor quam,
+                        feugiat vitae, ultricies eget, tempor sit amet, ante.</p>
+                    <br>
+                    <h2 class="sample-text-type-panel title-2" [style.color]="colorsA.fontColor">HEADING H2</h2>
+
+                    <p class="sample-text-type-panel paragraph" [style.color]="colorsA.fontColor"><em><strong>Aenean</strong> ultricies mi vitae est.</em></p>
+                    <br>
+                    <h3 class="sample-text-type-panel title-3" [style.color]="colorsA.fontColor">HEADING H3</h3>
+
+                    <p class="sample-text-type-panel paragraph" [style.color]="colorsA.fontColor"><em>Mauris placerat eleifend leo.</em></p>
+                    <br>
+                    <p class="sample-text-type-panel center-text paragraph" [style.color]="colorsA.fontColor"><em>Pellentesque habitant senectus</em><br> et netus et malesuada fames<br>ac turpis egestas.</p>
+                </div>
+                <div fxFlex="5%" [style.background]="colorsA.currentColor">
+
+
+                    <svg *ngIf="colorsA.isExpanded" class="font-popover-expanded" (click)="toggle('colorPalettes', i, 'typographyPanelExpanded')"
+                        viewBox="326 0 76 77" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <g id="Group-9" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(363.500000, 38.000000) scale(1, -1) translate(-363.500000, -38.000000) translate(326.000000, 0.000000)">
+                            <polygon id="Path-3" fill-opacity="0.6" fill="#D8D8D8" points="0.306640625 0.435546875 74.8888101 75.0177163 74.8888101 0.433274776"></polygon>
+                            <polyline id="Path-2" stroke="#3E4348" opacity="0.29739972" transform="translate(66.316480, 9.005605) rotate(-135.000000) translate(-66.316480, -9.005605) "
+                                points="58.3164799 4.88249935 66.5626911 13.1287106 74.3164799 4.88249935"></polyline>
+                        </g>
+                    </svg>
+                </div>
+            </div>
+
+            <div *ngIf="!colorsA.typographyPanelExpanded && !colorsA.typographyPanelExpanded && !colorsA.cssPanelExpanded" fxFlex="5%" class="left-panel"
+                [ngClass]="{'white-bg': colorsA.identifierShow && !colorsA.isExpanded, 'grey-bg': !colorsA.identifierShow  && colorsA.isExpanded}">
+                <div fxFlex>
+                    <svg [ngClass]="{'color-identifier': !colorsA.isExpanded, 'color-identifier-expanded': colorsA.isExpanded}" [style.top]="colorsA.identifierPosition"
+                        *ngIf="colorsA.identifierShow" viewBox="443 -14 14 25" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <desc>Created with Sketch.</desc>
+                        <defs></defs>
+                        <polyline id="Path-2" stroke="#979797" stroke-width="1" fill="none" points="444 -13 455.313708 -1.6862915 444 9.627417"></polyline>
+                    </svg>
+                </div>
+            </div>
+
+            <div *ngIf="!colorsA.typographyPanelExpanded && !colorsA.typographyPanelExpanded && !colorsA.cssPanelExpanded" [fxFlex]="{'45%': colorsA.isExpanded, '15%': !colorsA.isExpanded}"
+                class="left-panel" [ngClass]="{'white-bg': colorsA.identifierShow && !colorsA.isExpanded, 'grey-bg': !colorsA.identifierShow  && colorsA.isExpanded}">
+                <svg [ngClass]="{'octo-palette': colorsA.isExpanded, 'octo-palette-expanded': !colorsA.isExpanded}" class="octo-palette" viewBox="144 36 134 329"
+                    version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <g id="Group-3" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(144.000000, 36.000000)">
+                        <polygon (click)="selectColor(i, 0)" stroke="#fff" stroke-width="2" class="octo" [style.fill]="colorsA.palette[0]" points="54.9862416 0.1875 109.234202 39.2029849 88.5133249 102.331365 21.4591583 102.331365 0.73828125 39.2029849"></polygon>
+                        <polygon (click)="selectColor(i, 1)" stroke="#fff" stroke-width="2" class="octo" [style.fill]="colorsA.palette[1]" points="55.6581166 73 109.906077 112.015485 89.1851999 175.143865 22.1310333 175.143865 1.41015625 112.015485"></polygon>
+                        <polygon (click)="selectColor(i, 2)" stroke="#fff" stroke-width="2" class="octo" [style.fill]="colorsA.palette[2]" points="54.9862416 150.789314 109.234202 189.804799 88.5133249 252.933179 21.4591583 252.933179 0.73828125 189.804799"></polygon>
+                        <polygon (click)="selectColor(i, 3)" stroke="#fff" stroke-width="2" class="octo" [style.fill]="colorsA.palette[3]" points="54.9862416 225.856135 109.234202 264.871619 88.5133249 328 21.4591583 328 0.73828125 264.871619"></polygon>
+                    </g>
+                </svg>
+            </div>
+
+            <div *ngIf="!colorsA.typographyPanelExpanded && !colorsA.typographyPanelExpanded && !colorsA.cssPanelExpanded" fxFlex="50%"
+                class="center-panel" [style.background]="colorsA.currentColor" [ngClass]="currentFontStyles">
+                <svg (click)="toggle('colorPalettes', i, 'isExpanded')" *ngIf="!colorsA.isExpanded" class="popover-lg" viewBox="326 -1 76 77"
+                    version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <g id="Group" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(326.000000, 0.000000)">
+                        <polygon id="Path-3" fill-opacity="0.6" fill="#D8D8D8" points="0.306640625 0.435546875 74.8888101 75.0177163 74.8888101 0.433274776"></polygon>
+                        <polyline class="popover-open" id="Path-2" opacity="0.29739972" transform="translate(66.316480, 9.005605) rotate(-135.000000) translate(-66.316480, -9.005605) "
+                            points="58.3164799 4.88249935 66.5626911 13.1287106 74.3164799 4.88249935"></polyline>
+                    </g>
+                </svg>
+
+                <div *ngIf="colorsA.isExpanded" fxFlex class="sample-text-row">
+                    <h1 class="sample-text title-1" [style.color]="colorsA.fontColor" [style.font-size]="colorsA.fontStyles.hOne">H1</h1>
+                </div>
+                <div *ngIf="colorsA.isExpanded" fxFlex class="sample-text-row">
+                    <h2 class="sample-text title-2" [style.color]="colorsA.fontColor" [style.font-size]="colorsA.fontStyles.hTwo">H2</h2>
+                </div>
+                <div *ngIf="colorsA.isExpanded" fxFlex class="sample-text-row">
+                    <h3 class="sample-text title-3" [style.color]="colorsA.fontColor" [style.font-size]="colorsA.fontStyles.hThree">H3</h3>
+                </div>
+                <div *ngIf="colorsA.isExpanded" fxFlex class="sample-text-row">
+                    <p class="sample-text paragraph" [style.color]="colorsA.fontColor" [style.font-size]="colorsA.fontStyles.p">para.</p>
+                </div>
+                <div *ngIf="colorsA.isExpanded" fxFlex class="sample-text-row">
+                    <p class="sample-text italics" [style.color]="colorsA.fontColor" [style.font-size]="colorsA.fontStyles.p"><i>italic</i></p>
+                </div>
+
+                <svg *ngIf="colorsA.isExpanded" class="font-popover" (click)="toggle('colorPalettes', i, 'typographyPanelExpanded')" viewBox="325 0 76 77"
+                    version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <g id="Group-9" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(363.500000, 38.000000) scale(-1, -1) translate(-363.500000, -38.000000) translate(326.000000, 0.000000)">
+                        <polygon id="Path-3" fill-opacity="0.6" fill="#D8D8D8" points="0.306640625 0.435546875 74.8888101 75.0177163 74.8888101 0.433274776"></polygon>
+                        <polyline id="Path-2" stroke="#3E4348" opacity="0.29739972" transform="translate(66.316480, 9.005605) rotate(-135.000000) translate(-66.316480, -9.005605) "
+                            points="58.3164799 4.88249935 66.5626911 13.1287106 74.3164799 4.88249935"></polyline>
+                    </g>
+                </svg>
+
+            </div>
+
+            <div *ngIf="!colorsA.typographyPanelExpanded && colorsA.cssPanelExpanded" class="css-selection-panel" fxFlex fxLayout="row">
+                <div fxFlex="50%" class="style-selection-panel">
+                    <div fxFlex fxLayoutAlign="center center" class="offset-label">
+
+                        <p class="google-font-selector">
+                            Download palette.scss
+                        </p>
+
+                        <svg width="1rem" height="1rem" viewBox="127 276 10 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <polyline id="Path-2" stroke="#3E4348" stroke-width="1" fill="none" opacity="0.29739972" transform="translate(131.847597, 284.928067) scale(-1, 1) rotate(90.000000) translate(-131.847597, -284.928067) "
+                                points="123.847597 280.804962 132.093809 289.051173 139.847597 280.804962"></polyline>
+                        </svg>
+
+                    </div>
+                    <button class="css-selection-button  white-bg" md-raised-button>
+               <p class="css-button-text">
+                       css
+                    </p>
+                </button>
+                </div>
+                <div fxFlex="50%" class="style-selection-panel">
+                    <button class="css-selection-button white-bg offset" md-raised-button>    <p class="css-button-text">
+                       
+                       scss
+                    </p></button>
+                    <div fxFlex class="offset-label">
+
+
+                        <div fxFlex fxLayoutAlign="center center" class="offset-label">
+
+                            <svg width="1rem" height="1rem" viewBox="127 276 10 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <polyline id="Path-2" stroke="#3E4348" stroke-width="1" fill="none" opacity="0.29739972" transform="translate(131.847597, 284.928067) rotate(90.000000) translate(-131.847597, -284.928067) "
+                                    points="123.847597 280.804962 132.093809 289.051173 139.847597 280.804962"></polyline>
+                            </svg>
+                            <p class="google-font-selector">
+                                Download palette.css
+                            </p>
+
+                        </div>
+                    </div>
+                    <svg class="css-popover" (click)="toggle('colorPalettes', i, 'cssPanelExpanded')" viewBox="326 0 76 77" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <g id="Group-9" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(363.500000, 38.000000) scale(1, -1) translate(-363.500000, -38.000000) translate(326.000000, 0.000000)">
+                            <polygon id="Path-3" fill-opacity="0.6" fill="#D8D8D8" points="0.306640625 0.435546875 74.8888101 75.0177163 74.8888101 0.433274776"></polygon>
+                            <polyline id="Path-2" stroke="#3E4348" opacity="0.29739972" transform="translate(66.316480, 9.005605) rotate(-135.000000) translate(-66.316480, -9.005605) "
+                                points="58.3164799 4.88249935 66.5626911 13.1287106 74.3164799 4.88249935"></polyline>
+                        </g>
+                    </svg>
+                </div>
+            </div>
+
+            <div *ngIf="colorsA.isExpanded && !colorsA.typographyPanelExpanded && !colorsA.cssPanelExpanded" fxFlex="30%" class="right-panel"
+                [style.border-left]="{'border-left: 1px dotted rgba(0,0,0,.1)': colorsA.isExpanded, 'border-left: 1px dotted rgba(0,0,0,.1)': !colorsA.isExpanded}">
+                <div fxFlex class="font-ui-label-bar white">
+                    <div fxFlex="30%">
+                        <svg (click)="toggle('colorPalettes', i, 'isExpanded')" *ngIf="colorsA.isExpanded" class="popover" viewBox="404 542 76 77"
+                            version="1.1" xmlns="http://www.w3.org/2000/svg">
+
+                            <g id="Group" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(442.000000, 580.982422) scale(-1, 1) translate(-442.000000, -580.982422) translate(404.500000, 542.982422)">
+                                <polygon id="Path-3" fill-opacity="1" fill="#fff" points="0.306640625 0.435546875 74.8888101 75.0177163 74.8888101 0.433274776"></polygon>
+                                <path d="M49.6602299,9.00560497 L66.3164799,25.661855" id="Path-6" stroke="#979797"></path>
+                                <path d="M66.3164799,9.00560497 L49.6602299,25.661855" id="Path-6-Copy" stroke="#979797"></path>
+                            </g>
+                        </svg>
+                    </div>
+                    <div fxFlex="20%">
+
+                    </div>
+                    <div fxFlex="50%">
+
+                    </div>
+                </div>
+                <div fxFlex class="font-scrollbox" #scrollMe>
+                    <div class="gradientOverlay"></div>
+                    <div fxFlex class="font-select" *ngFor="let fontFamily of allFonts; let ii=index" [ngClass]="fontFamily.fontSelected ? 'font-selected': 'font-select'"
+                        (click)="selectFont(ii)">
+                        <p class="google-font-selector">
+                            {{fontFamily.family}}
+                        </p>
+                    </div>
+                </div>
+                <div class="font-color-selector" fxLayout="row" fxLayoutAlign="center center">
+                    <div fxFlex="25%" class="font-color-box" [style.background-color]="colorsA.palette[0]" (click)="selectFontColor(i, 0)">
+                    </div>
+                    <div fxFlex="25%" class="font-color-box" [style.background-color]="colorsA.palette[1]" (click)="selectFontColor(i, 1)">
+                    </div>
+                    <div fxFlex="25%" class="font-color-box" [style.background-color]="colorsA.palette[2]" (click)="selectFontColor(i, 2)">
+                    </div>
+                    <div fxFlex="25%" class="font-color-box" [style.background-color]="colorsA.palette[3]" (click)="selectFontColor(i, 3)">
+                    </div>
+                </div>
+                <div fxFlex class="font-palette-identifier">
+                    <svg class="font-color-icon" [style.padding-left]="colorsA.fontPaletteIdentifierPosition" viewBox="437 -9 25 14" version="1.1"
+                        xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <polyline id="Path-2" stroke="#979797" stroke-width="1" fill="none" transform="translate(449.656854, -1.686292) rotate(-90.000000) translate(-449.656854, 1.686292) "
+                            points="444 -13 455.313708 -1.6862915 444 9.627417"></polyline>
+                    </svg>
+                </div>
+
+
+                <div fxFlex class="select-content-font">
+                    <p fxFlex class="font-size-text">{{colorsA.fontStyles.fontScale}}</p>
+                </div>
+
+
+                <div fxFlex class="font-ui-label-bar" fxLayoutAlign="center center">
+                    <div fxFlex="50%" class="font-up-down">
+                        <button class="incrementer" md-raised-button (click)="incrementFont(false, i)" [disabled]="colorsA.fontStyles.fontScale === '0.1'">-</button>
+                    </div>
+
+                    <div fxFlex="50%" class="font-up-down">
+                        <button class="incrementer" md-raised-button (click)="incrementFont(true, i)" [disabled]="colorsA.fontStyles.fontScale === '2.0'">+</button>
+                    </div>
+                </div>
+                <div fxFlex class="font-ui-label-bar rnd-crn">
+                    <button class="incrementer-lg" md-raised-button (click)="toggle('colorPalettes', i, 'cssPanelExpanded')">css</button>
+                </div>
+            </div>
+        </md-card>
         <a href="https://github.com/andalex/Chroma">
             <svg width="100%" height="12rem" viewBox="621 72 204 193" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                 <g id="logo" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(623.000000, 74.072266)">
