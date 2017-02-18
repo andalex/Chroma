@@ -1,0 +1,62 @@
+
+/*
+
+* === CHROMA COLOR PALETTE : ) ===
+
+*/
+
+
+
+/*
+
+* — Defaults —
+
+*/
+
+
+$primaryFont: #1F2124;
+
+$primaryBackground: #fff;
+
+.primary-font {color: $primaryFont;} 
+
+.primary-background {background-color: $primaryBackground;}
+
+
+/*
+
+* — Palette —
+
+*/
+
+
+$moccasin: #FFECB3;
+
+$darkslategray: #455A64;
+
+$palegoldenrod: #C5E1A5;
+
+$lightsalmon: #FF9E80;
+
+$honeydew: #F1F8E9;
+
+.primary-alpha{ background-color: $moccasin;}
+
+.primary-beta{ background-color: $darkslategray;}
+
+.accent-alpha{ background-color: $palegoldenrod;}
+
+.accent-beta{ background-color: $lightsalmon;}
+
+.accent-gamma{ background-color: $honeydew;}
+
+.primary-alpha-font { color: $moccasin;}
+
+.primary-beta-font { color: $darkslategray;}
+
+.accent-alpha-font { color: $palegoldenrod;}
+
+.accent-beta-font { color: $lightsalmon;}
+
+.accent-gamma-font { color: $honeydew;}
+

@@ -1,29 +1,21 @@
 import { Injectable } from '@angular/core';
 import { Http, Response, Headers } from '@angular/http';
 import { Observable } from 'rxjs/Rx';
-import {  Palette } from './palette';
+import {  Css } from './css';
 
 @Injectable()
-export class PaletteService {
+export class CssService {
 
   constructor(private http: Http) {}
 
 
   private baseUrl: string = 'http://localhost:8080';
-  private path: string = 'chroma'
 
-  public getAll(): Observable<Palette> {
-    let requestUrl =  `${this.baseUrl}/${this.path}`;    
 
-    return <Observable<Palette>>this.http.get(requestUrl)
-      .map((res) => res.json())
-      .catch(this.handleHttpError);
-  }
+    public getCssByPaletteId(id: string, scss: boolean): Observable<Css> {
+    let requestUrl =  `${this.baseUrl}/${id}?scss=${scss}`;    
 
-    public getOneById(id: string): Observable<Palette> {
-    let requestUrl =  `${this.baseUrl}/${this.path}`;    
-
-    return <Observable<Palette>>this.http.get(requestUrl)
+    return <Observable<Css>>this.http.get(requestUrl)
       .map((res) => res.json())
       .catch(this.handleHttpError);
   }

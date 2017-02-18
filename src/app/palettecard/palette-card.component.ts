@@ -6,10 +6,11 @@ import * as WebFont from 'webfontloader';
 
 //color palettes
 import { PaletteService } from '../palette.service';
+import { CssService } from '../css.service';
 
 @Component({
   selector: 'palette',
-  providers: [FontService, PaletteService],
+  providers: [FontService, PaletteService, CssService],
   styleUrls: ['./palette-card.component.css'],
   templateUrl: './palette-card.component.html'
 })
@@ -18,15 +19,24 @@ export class PaletteCardComponent implements OnInit {
 
   constructor(
     private fontService: FontService,
-    private paletteService: PaletteService
+    private paletteService: PaletteService,
+    private cssService: CssService;
   ) { }
 
   public allFonts: Array<any> = [];
   public colorPalettes: any;
 
   public ngOnInit() {
+
+    //request googlefonts api via our font service
     this.fontService.getAll('popularity').subscribe(res => { this.allFonts = res['items'].slice(0, 49) });
+   
     this.paletteService.getAll().subscribe(res => { this.colorPalettes = res });
+
+  }
+
+  public downloadCss(palette: any, scss: boolean) {
+    this.cssService.getCssByPaletteId(palette._id, scss).subscribe(res => { console.log('file downloaded!' )})
   }
 
   public toggle(arr: string, index: number, prop: string) {
@@ -64,7 +74,7 @@ export class PaletteCardComponent implements OnInit {
   public currentFontStyles: any;
 
   public selectFont(index) {
-
+    
     //deselect any other fonts
     this.allFonts.map(font => font.fontSelected = false)
 
