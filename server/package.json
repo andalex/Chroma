@@ -4,6 +4,7 @@
   "description": "webpack app for pdx401",
   "scripts": {
     "start": "eval $(cat .env) nodemon server.js",
+    "load-data": "node ./models/sample-data.js",
     "test": "nodemon --exec 'mocha' test/"
   },
   "repository": {

@@ -15,7 +15,6 @@ export class FontService {
   private baseUrl: string = 'https://www.googleapis.com/webfonts/v1/webfonts';
 
   public getAll(sort: string): Observable<Font> {
-    console.log('gtAll fonts has been called')
     let requestUrl =  `${this.baseUrl}?key=${this.apiKey}`
 
     if (sort) {

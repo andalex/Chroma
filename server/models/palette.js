@@ -1,6 +1,5 @@
 const mongoose = require('mongoose');
 const db = require('./db');
-const palettes = require('./palettes.json');
 
 var Schema = mongoose.Schema;
 var Palette = new Schema({
@@ -27,18 +26,4 @@ var Palette = new Schema({
 
 var chromaPalettesData = mongoose.model('chromaPalettes', Palette);
 module.exports = chromaPalettesData;
-
-
-function readInJsonDb(data) {
-    var rm = chromaPalettesData.find().remove({});
-    rm.exec();
-    for (var ii = 0; ii < data.length; ii++) {
-        var newEntry = new chromaPalettesData(data[ii]).save();
-        if(ii < data.length-1) {
-        }
-    }
-
-}
-// readInJsonDb(palettes);
-
 
