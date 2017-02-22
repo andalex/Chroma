@@ -14,28 +14,38 @@ router.get('/', function(req, res) {
     res.sendFile(path.join(__dirname + '/public', 'index.html'));
 });
 
-router.get('/chroma', function(req, res) {
+router.get('/chroma', function(req, res, next) {
   chromaPalettes.find({}, (err, data) => {
       if (err) {
           res.send(err);
       } else {
           res.send(data);
-      }
+      };
+      next();
   });
 
-  router.get('/:id', (req, res) => {
-
-    // let fileType = req.query.scss ? 'palette.scss' : 'palette.css';
-
+  router.post('/chroma/:id', (req, res) => {
+    let scss;
+    if(req.query.scss == 'true') {
+        scss = true;
+    } else {
+        scss = false;
+    }
+    var fileType = scss ? 'palette.scss' : 'palette.css';
     //findById throwing errors so using find one manually here
-    chromaPalettes.findOne({ '_id' : req.params.id }, (err, data) => {
+    chromaPalettes.findById(req.params.id, (err, data) => {
         if (err) {
             res.send(err);
         } else {
-            genCss(data, req.query.scss, () => {
-            res.download(`/models/palette.css`, (err) => {
-                if (err) console.log(err);
-                console.log('download sent')
+            genCss(data, scss, () => {
+            res.set('Content-Type', 'text/css');
+            res.download((__dirname + `/public/${fileType}`), (err) => {
+                if (err)  {
+                console.log(err);
+                return;
+            } else {
+                console.log('download sent');
+            }     
             });
          }); 
         }

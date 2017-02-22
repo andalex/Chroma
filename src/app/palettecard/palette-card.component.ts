@@ -36,11 +36,7 @@ export class PaletteCardComponent implements OnInit {
   }
 
   public downloadCss(palette: any, scss: any) {
-    console.log(palette._id, scss);
-    
-  this.cssService.getCssByPaletteId(palette._id, scss).subscribe((res) => {
-
-    })
+    this.cssService.getCssByPaletteId(palette._id, scss).subscribe();
   }
 
   public toggle(arr: string, index: number, prop: string) {

@@ -1,37 +1,39 @@
 import { Injectable } from '@angular/core';
-import { Http, Response, Headers } from '@angular/http';
+import { Http, Response, Headers, RequestOptions, ResponseContentType, RequestMethod  } from '@angular/http';
 import { Observable } from 'rxjs/Rx';
 import {  Css } from './css';
+import * as FileSaver from "file-saver";
 
 @Injectable()
 export class CssService {
 
+  private baseUrl: string = 'http://localhost:8080';
   constructor(private http: Http) {}
 
+  public getCssByPaletteId(id: string, scss: boolean) {
+      let requestUrl =  `${this.baseUrl}/chroma/${id}?scss=${scss}`;
+      let MIMEtype = scss ? 'text/x-scss' : 'text/css';
+      let fileType = scss ? 'palette.scss' : 'palette.css';
 
-  private baseUrl: string = 'http://localhost:8080';
+      let headers = new Headers({ 'Content-Type': MIMEtype, 'Accept': MIMEtype });
+      let options = new RequestOptions({ headers: headers, responseType: ResponseContentType.Blob });
 
-
-    public getCssByPaletteId(id: string, scss: boolean): Observable<Css> {
-    let requestUrl =  `${this.baseUrl}/${id}?scss=${scss}`;
-
-    return <Observable<Css>>this.http.get(requestUrl)
-      .map((res) => {
-        console.log(res.json())
-
-      })
-      .catch(this.handleHttpError);
+      return this.http.post(requestUrl, '', options)
+                      .map((res: Response) =>{
+                            let blob: Blob = res.blob();
+                            FileSaver.saveAs(blob, fileType);
+                      })
+                      .catch(this.handleHttpError);
   }
-
+ 
   /*
     Handler for possible http request errors
   */
-
   private handleHttpError(error: any) {
-    console.log('ERROR ERROR !')
-    let errMsg = (error.message) ? error.message :
+      let errMsg = (error.message) ? error.message :
       error.status ? `${error.status} - ${error.statusText}` : 'Server error';
 
-    return Observable.throw(errMsg);
+      return Observable.throw(errMsg);
   }
+
 }

@@ -85,6 +85,7 @@
     "@angularclass/hmr-loader": "~3.0.2",
     "angular2-font-picker": "^2.0.1",
     "core-js": "^2.4.1",
+    "file-saver": "^1.3.3",
     "hammerjs": "^2.0.8",
     "http-server": "^0.9.0",
     "ie-shim": "^0.1.0",

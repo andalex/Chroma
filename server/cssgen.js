@@ -44,8 +44,7 @@ let fontcolorCss = [];
 let cssData = '';
 let noScss = '';
 
-let fileType = 'palette.css';
-
+let fileType = scss ? 'palette.scss' : 'palette.css';
 
 if(!scss) {
     colorCss.push(palComments[0],
@@ -64,12 +63,11 @@ if(!scss) {
                  palComments[2]);
 }
 
-
 for(var ii= 0; ii < paletteObject.palette.length; ii++) {
 
     colorNames.push(namer(paletteObject.palette[ii]).html[0].name);
 
-    if(!scss) {
+    if(scss) {
         colorCss.push(`${colorClassNames[ii]}{ background-color: ${paletteObject.palette[ii]};}\n\n`);
         fontcolorCss.push(`${colorClassNames[ii]}-font { color: ${paletteObject.palette[ii]};}\n\n`);
     } else {
@@ -86,12 +84,11 @@ if(!scss) {
     cssData = `${scssVars.join('')}${colorCss.join('')}${fontcolorCss.join('')}`;
 }
 
-try {
-    fs.writeFileSync(`/server/models/${fileType}`, cssData);
-} catch(err) {
-    console.log(err);
-}
+fs.writeFile((__dirname + `/public/${fileType}`), cssData, (err)=> {
+if(err) console.log('from gen-css: ', err)
 sendCss();
-}
+});
+
+};
 
 module.exports = genCss;

@@ -1,0 +1,44 @@
+
+                    /*
+
+                    * === CHROMA COLOR PALETTE : ) ===
+
+                    */
+
+
+                    
+                    /*
+
+                    * — Defaults —
+
+                    */
+
+
+                    .primary-font{ color: #1F2124;}
+
+.primary-background { background-color: #fff;}
+
+
+                    /*
+
+                    * — Palette —
+
+                    */
+
+
+                    .primary-alpha{ background-color: $goldenrod;}
+
+.primary-beta{ background-color: $coral;}
+
+.accent-alpha{ background-color: $darkslategrey;}
+
+.accent-beta{ background-color: $black;}
+
+.primary-alpha-font { color: $goldenrod;}
+
+.primary-beta-font { color: $coral;}
+
+.accent-alpha-font { color: $darkslategrey;}
+
+.accent-beta-font { color: $black;}
+
