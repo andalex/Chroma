@@ -1,0 +1,48 @@
+
+/*
+
+* === CHROMA COLOR PALETTE : ) ===
+
+*/
+
+
+
+/*
+
+* — Defaults —
+
+*/
+
+
+.primary-font{ color: #1F2124;}
+
+.primary-background { background-color: #fff;}
+
+
+/*
+
+* — Palette —
+
+*/
+
+
+.primary-alpha{ background-color: #FFECB3;}
+
+.primary-beta{ background-color: #455A64;}
+
+.accent-alpha{ background-color: #C5E1A5;}
+
+.accent-beta{ background-color: #FF9E80;}
+
+.accent-gamma{ background-color: #F1F8E9;}
+
+.primary-alpha-font { color: #FFECB3;}
+
+.primary-beta-font { color: #455A64;}
+
+.accent-alpha-font { color: #C5E1A5;}
+
+.accent-beta-font { color: #FF9E80;}
+
+.accent-gamma-font { color: #F1F8E9;}
+

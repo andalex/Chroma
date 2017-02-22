@@ -30,33 +30,33 @@ $primaryBackground: #fff;
 */
 
 
-$moccasin: #FFECB3;
+$black: #212121;
 
-$darkslategray: #455A64;
+$cornsilk: #FFF8E1;
 
-$palegoldenrod: #C5E1A5;
+$orange: #F9A825;
 
-$lightsalmon: #FF9E80;
+$rosybrown: #A1887F;
 
-$honeydew: #F1F8E9;
+$silver: #BDBDBD;
 
-.primary-alpha{ background-color: $moccasin;}
+.primary-alpha{ background-color: $black;}
 
-.primary-beta{ background-color: $darkslategray;}
+.primary-beta{ background-color: $cornsilk;}
 
-.accent-alpha{ background-color: $palegoldenrod;}
+.accent-alpha{ background-color: $orange;}
 
-.accent-beta{ background-color: $lightsalmon;}
+.accent-beta{ background-color: $rosybrown;}
 
-.accent-gamma{ background-color: $honeydew;}
+.accent-gamma{ background-color: $silver;}
 
-.primary-alpha-font { color: $moccasin;}
+.primary-alpha-font { color: $black;}
 
-.primary-beta-font { color: $darkslategray;}
+.primary-beta-font { color: $cornsilk;}
 
-.accent-alpha-font { color: $palegoldenrod;}
+.accent-alpha-font { color: $orange;}
 
-.accent-beta-font { color: $lightsalmon;}
+.accent-beta-font { color: $rosybrown;}
 
-.accent-gamma-font { color: $honeydew;}
+.accent-gamma-font { color: $silver;}
 

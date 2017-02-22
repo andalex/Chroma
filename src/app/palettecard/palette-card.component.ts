@@ -20,7 +20,7 @@ export class PaletteCardComponent implements OnInit {
   constructor(
     private fontService: FontService,
     private paletteService: PaletteService,
-    private cssService: CssService;
+    private cssService: CssService
   ) { }
 
   public allFonts: Array<any> = [];
@@ -35,8 +35,13 @@ export class PaletteCardComponent implements OnInit {
 
   }
 
-  public downloadCss(palette: any, scss: boolean) {
-    this.cssService.getCssByPaletteId(palette._id, scss).subscribe(res => { console.log('file downloaded!' )})
+  public downloadCss(palette: any, scss: any) {
+    console.log(palette._id, scss);
+    
+  this.cssService.getCssByPaletteId(palette._id, scss).subscribe((res) => {
+
+    })
+    
   }
 
   public toggle(arr: string, index: number, prop: string) {

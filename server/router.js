@@ -25,7 +25,7 @@ router.get('/chroma', function(req, res) {
 
   router.get('/:id', (req, res) => {
 
-    let fileType = req.query.scss ? 'palette.scss' : 'palette.css';
+    // let fileType = req.query.scss ? 'palette.scss' : 'palette.css';
 
     //findById throwing errors so using find one manually here
     chromaPalettes.findOne({ '_id' : req.params.id }, (err, data) => {
@@ -33,7 +33,10 @@ router.get('/chroma', function(req, res) {
             res.send(err);
         } else {
             genCss(data, req.query.scss, () => {
-            res.download(path.join(__dirname + '/models', `${fileType}`));
+            res.download(`/models/palette.css`, (err) => {
+                if (err) console.log(err);
+                console.log('download sent')
+            });
          }); 
         }
     });

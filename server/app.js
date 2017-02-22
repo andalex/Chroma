@@ -4,8 +4,7 @@ const bodyParser    = require('body-parser');
 const logger        = require('morgan');
 const router        = require('./router');
 const app           = express();
-const public        = path.join( __dirname + '/public');
-// const auth 					= require('./user-route');
+const public        = path.join( __dirname + '../dist');
 
 app.use(bodyParser.json());
 app.use(logger('dev'));
@@ -16,6 +15,5 @@ app.use((req, res, next) => {
 	next();
 });
 app.use('/', router);
-// app.use('/auth', auth);
 app.use(express.static(public, {redirect : false}));
 module.exports = app;

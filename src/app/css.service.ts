@@ -13,10 +13,13 @@ export class CssService {
 
 
     public getCssByPaletteId(id: string, scss: boolean): Observable<Css> {
-    let requestUrl =  `${this.baseUrl}/${id}?scss=${scss}`;    
+    let requestUrl =  `${this.baseUrl}/${id}?scss=${scss}`;
 
     return <Observable<Css>>this.http.get(requestUrl)
-      .map((res) => res.json())
+      .map((res) => {
+        console.log(res.json())
+
+      })
       .catch(this.handleHttpError);
   }
 
@@ -25,6 +28,7 @@ export class CssService {
   */
 
   private handleHttpError(error: any) {
+    console.log('ERROR ERROR !')
     let errMsg = (error.message) ? error.message :
       error.status ? `${error.status} - ${error.statusText}` : 'Server error';
 

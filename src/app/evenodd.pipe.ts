@@ -6,7 +6,7 @@ The transform method is essential to a pipe. The PipeTransform interface defines
 */ 
 @Pipe({name: 'evenOdd'})
 export class EvenOddPipe implements PipeTransform {
-  transform(value: number, evenodd: boolean): any {
+  transform(value: Array<any>, evenodd: boolean): any {
      if (!value) return value;
      let even = [];
      let odd = [];
@@ -19,4 +19,5 @@ export class EvenOddPipe implements PipeTransform {
        });
      if(evenodd) return even;
      return odd;
+}
 }
