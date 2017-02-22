@@ -41,14 +41,17 @@ export class PaletteCardComponent implements OnInit {
   this.cssService.getCssByPaletteId(palette._id, scss).subscribe((res) => {
 
     })
-    
   }
 
   public toggle(arr: string, index: number, prop: string) {
     this[arr][index][prop] = !this[arr][index][prop];
+    console.log('trying to toggole:', this[arr][index]);
+     console.log(arr, index, prop);
   }
 
   public selectColor(index, palIndex) {
+    console.log(index, palIndex);
+    
 
     //fill right panel with selected color
     this.colorPalettes[index].currentColor = this.colorPalettes[index].palette[palIndex];
@@ -67,7 +70,7 @@ export class PaletteCardComponent implements OnInit {
   }
 
   public selectFontColor(index, palIndex) {
-
+ console.log(index, palIndex);
     //color font with selected color
     this.colorPalettes[index].fontColor = this.colorPalettes[index].palette[palIndex];
 
@@ -79,7 +82,7 @@ export class PaletteCardComponent implements OnInit {
   public currentFontStyles: any;
 
   public selectFont(index) {
-    
+     console.log(index);
     //deselect any other fonts
     this.allFonts.map(font => font.fontSelected = false)
 
@@ -117,6 +120,7 @@ export class PaletteCardComponent implements OnInit {
 
   //set initial font ratio styles
   public incrementFont(increment, index) {
+     console.log(increment, index);
     let fontScaleValue = this.colorPalettes[index].fontInitialValue;
     if (increment && fontScaleValue < 20) {
       this.colorPalettes[index].fontInitialValue++;
