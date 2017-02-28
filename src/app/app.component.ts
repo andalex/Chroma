@@ -6,7 +6,6 @@ import {
   OnInit,
   ViewEncapsulation
 } from '@angular/core';
-import { AppState } from './app.service';
 
 /*
  * App Component
@@ -51,11 +50,8 @@ import { AppState } from './app.service';
   </main>`
 })
 export class AppComponent implements OnInit {
-  constructor(
-    public appState: AppState
-  ) { }
-
+  constructor() { }
   public ngOnInit() {
-    console.log('Initial App State', this.appState.state);
+ 
   }
 }

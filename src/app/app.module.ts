@@ -28,7 +28,6 @@ import { ENV_PROVIDERS } from './environment';
 import { ROUTES } from './app.routes';
 import { AppComponent } from './app.component';
 import { APP_RESOLVER_PROVIDERS } from './app.resolver';
-import { AppState, InternalStateType } from './app.service';
 import { PaletteCardComponent } from './palettecard';
 import { DropDownComponent } from './dropdown';
 import { NoContentComponent } from './404';
@@ -43,13 +42,8 @@ import {
 
 import '../styles/styles.scss';
 
-const APP_PROVIDERS = [
-
-  AppState
-];
 
 type StoreType = {
-  state: InternalStateType,
   restoreInputValues: () => void,
   disposeOldHosts: () => void
 };
@@ -101,22 +95,20 @@ export class Safe {
     MaterialModule.forRoot(),
     FlexLayoutModule.forRoot()
   ],
-  providers: [ ENV_PROVIDERS, APP_PROVIDERS ]
+  providers: [ ENV_PROVIDERS ]
 })
 export class AppModule {
 
   constructor(
-    public appRef: ApplicationRef,
-    public appState: AppState
+    public appRef: ApplicationRef
   ) {}
 
   public hmrOnInit(store: StoreType) {
-    if (!store || !store.state) {
+    if (!store) {
       return;
     }
     console.log('HMR store', JSON.stringify(store, null, 2));
-    // set state
-    this.appState._state = store.state;
+ 
     // set input values
     if ('restoreInputValues' in store) {
       let restoreInputValues = store.restoreInputValues;
@@ -124,15 +116,12 @@ export class AppModule {
     }
 
     this.appRef.tick();
-    delete store.state;
     delete store.restoreInputValues;
   }
 
   public hmrOnDestroy(store: StoreType) {
     const cmpLocation = this.appRef.components.map((cmp) => cmp.location.nativeElement);
-    // save state
-    const state = this.appState._state;
-    store.state = state;
+  
     // recreate root elements
     store.disposeOldHosts = createNewHosts(cmpLocation);
     // save input values

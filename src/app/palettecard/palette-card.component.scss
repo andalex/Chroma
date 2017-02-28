@@ -1,14 +1,241 @@
-.small-info-text {
-      font-size: 0.3em;
-    padding: 0 0 0 .6em;
-    line-height: .6em;
-    text-align: left;
+// CARD:
+
+.pallete-card {
+    height: 20rem;
+    width: 20rem;
+    margin: 1rem auto !important;
+    padding: 0 !important;
+}
+.pallete-card {
+    margin: 2rem;
+}
+.left-panel,
+.center-panel,
+.right-panel,
+.left-panel-expanded,
+.center-panel-expanded,
+.right-panel-expanded {
+    height: 20rem;
+    transition: all 0.3s ease;
 }
 
+.center-panel { background-size: 300% 300%; }
+.octo-palette {
+    position: relative;
+    height: 12rem;
+    width: 5rem;
+    top: 3.5rem;
+    left: 2rem;
+    transition: all .7s ease;
+}
+.octo-palette-expanded {
+    position: relative;
+    height: 12rem;
+    width: 5rem;
+    top: 3.5rem;
+    left: 7rem;
+    transition: all .7s ease;
+}
+.octo { cursor: pointer; }
+.color-picker {
+    position: relative;
+    top: 2rem;
+    left: 2rem;
+    color: #D8D8D8;
+}
+
+
+// POPOVER / EXPANDER ELEMENTS:
+
+.popover {
+    position: relative;
+    top: 0;
+    left: calc(100% - 4rem);
+    width: 2rem;
+    z-index: 104;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.popover-lg {
+    position: relative;
+    top: -1px;
+    width: 4rem;
+    left: 61.5%;
+    z-index: 104;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.font-popover {
+    position: relative;
+    top: -2rem;
+    left: 0;
+    width: 2rem;
+    z-index: 104;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.css-popover {
+    position: absolute;
+    left: calc(100% - 4rem);
+    top: calc(100% - 4rem);
+    width: 4rem;
+    height: 4rem;
+    z-index: 104;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+
+.font-popover-expanded {
+    position: relative;
+     top: 8.2rem;
+    left: -2.8rem;
+     width: 4rem;
+    z-index: 104;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.popover-close {
+    stroke: #3E4348;
+    transform: rotateY(1deg);
+}
+.popover-open {
+    stroke: #3E4348;
+}
+
+
+// TYPOGRAPHY SELECTION:
 .typo-panel {
   height: 100%;
 }
+.sample-text {
+    margin: 0;
+    text-align: center;
+}
+.sample-text-type-panel {
+    margin: 0;
+    text-align: left;
+}
 
+.sample-text-type-panel.title-1 { font-size: 1.75em; }
+.sample-text-type-panel.title-2 { font-size: 1.4em; }
+.sample-text-type-panel.title-3 { font-size: 1.04em; }
+.sample-text-type-panel.paragraph { font-size: 0.7em; }
+.font-ui-label-bar {
+    color: #aaaaaa;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 3rem;
+    border-left: 1px dotted rgba(120,120,120,.1);
+}
+.font-ui-label-bar.top { height: 2rem; }
+
+.font-selector {
+    text-align: center;
+    height: 2rem;
+    font-weight: 100;
+}
+.font-selected {
+    height: 1.25rem;
+    align-items: center;
+    justify-content: center;
+    padding: .3rem;
+    background-color: rgba(0,0,0,.1);
+}
+.sample-text-row {
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.font-up-down {
+    height: 100%;
+    cursor: pointer;
+        align-items: center;
+    justify-content: center;
+}
+.select-content {
+    height: 2.3rem;
+}
+.select-content-font {
+    height: 2rem;
+      align-items: center;
+    justify-content: center;
+}
+.font-selector {
+    height: 0.625rem;
+}
+.font-select {
+     height: 1.25rem;
+    align-items: center;
+    justify-content: center;
+    padding: .3rem;
+     cursor: pointer;
+}
+.google-font-selector {
+    font-size: .5em;
+    margin: 0;
+    text-transform: uppercase;
+    font-weight: 300;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.font-scrollbox {
+    overflow-y: scroll;
+    height:5rem;
+    height: 6.75rem;
+    margin-top: 0;
+    border-left: 1px dotted rgba(0,0,0,.1);
+}
+.font-size-text {
+    font-size: 1rem;
+    text-align: center;
+    color: #aaaaaa;
+    line-height: 1rem;
+    margin-top: .2rem;
+}
+
+
+
+// FONT COLOR:
+
+.font-color-selector {
+    height: 2rem;
+}
+.font-color-box {
+    height: 100%;
+    cursor: pointer;
+}
+
+.color-identifier {
+    position: relative;
+    top: 4rem;
+    width: 1rem;
+    left: 6.5rem;
+    opacity: .6;
+    transition: all 0.3s ease;
+}
+
+.font-color-icon {
+    position: relative;
+    top: 0rem;
+    width: 12.5%;
+    left: 0;
+    padding-left: 0.25rem;
+    transition: all 0.3s ease;
+}
+.color-identifier-expanded {
+    position: relative;
+    top: 4rem;
+    width: 1rem;
+    left: 1.5rem;
+    opacity: .6;
+    transition: all 0.3s ease;
+}
+
+// USE PANE:
 .css-selection-panel {
   height: 100%;
   
@@ -17,13 +244,7 @@
   margin: .2rem;
       background-color: #efefef;
 }
-   
-.offset-label {
-  height: 10rem;
-}
-
 .css-button-text {
-    /*font-size: 1em;*/
     text-transform: uppercase;
     font-weight: 900;
     color: rgb(170,170,170);
