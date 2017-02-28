@@ -9,10 +9,10 @@ export class PaletteService {
   constructor(private http: Http) {}
 
 
-  private baseUrl: string = 'http://localhost:8080';
+  private baseUrl: string = 'https://able-painter.gomix.me';
   private path: string = 'chroma'
 
-  public getAll(): Observable<Palette> {
+  public getAll(column: string): Observable<Palette> {
     let requestUrl =  `${this.baseUrl}/${this.path}`;    
 
     return <Observable<Palette>>this.http.get(requestUrl)

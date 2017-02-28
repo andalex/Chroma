@@ -9,6 +9,7 @@
     font-family: 'Karla', monospace;
     font-size: .9em;
     letter-spacing: .05em;
+    
 }
 h1,h2,h3 {
     color: rgba(170,170,170, 0.6);
@@ -34,8 +35,6 @@ a {
 
 }
 #contract-dropdown {
-    position: relative;
-    left: 9.25rem;
     cursor: pointer;
 }
 .small-info-text {
@@ -49,6 +48,8 @@ a {
 .dropdown-content {
       transition: all .5s ease;
       padding:1rem;
+      width: 20rem;
+      text-align: center;
 }
 .chroma-example-gif {
    background: url("./chroma3.gif");

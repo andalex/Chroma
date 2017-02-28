@@ -4,12 +4,12 @@
             <p (click)='toggle()' class="small-info-text">+ ABOUT +</p>
         </div>
     </div>
-
+     <div fxFlexLayout="row" fxLayoutAlign="center center">
     <div [style.height]="dropDownHeight" [style.padding]="dropDownPadding" fxFlexLayout="row" fxLayoutAlign="center" class="dropdown-content">
         <div fxFlex *ngIf="dropDownExpanded">
             <h1>Chroma</h1>
             <p>An interactive palette tool for font and color pairings.</p>
-            <!--<div class="chroma-example-gif"></div>-->
+            <div class="chroma-example-gif"></div>
             <p><strong>Expand a palette</strong></p>
             <p><strong>Select font colors and backgrounds</strong></p>
             <p><strong>Select from the top 100 google fonts</strong></p>
@@ -40,5 +40,6 @@
                     points="123.847597 280.804962 132.093809 289.051173 139.847597 280.804962"></polyline>
             </svg>
         </div>
+    </div>
     </div>
 </div>

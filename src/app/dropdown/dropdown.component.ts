@@ -29,7 +29,7 @@ export class DropDownComponent implements OnInit, AfterViewChecked {
     public toggle() {
         this.dropDownExpanded = !this.dropDownExpanded;
         if (this.dropDownExpanded) {
-            this.dropDownHeight = '72rem';
+            this.dropDownHeight = '67rem';
             this.dropDownPadding = '1rem';
         } else {
             this.dropDownHeight = '0rem';
