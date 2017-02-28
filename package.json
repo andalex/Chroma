@@ -1,22 +1,22 @@
 {
-  "name": "angular2-webpack-starter",
-  "version": "5.4.1",
-  "description": "An Angular 2 Webpack Starter kit featuring Angular 2 (Router, Http, Forms, Services, Tests, E2E, Coverage), Karma, Protractor, Jasmine, Istanbul, TypeScript, and Webpack by AngularClass",
+  "name": "Chroma",
+  "version": "v0.0.2",
+  "description": "An Interactive Palette Tool.",
   "keywords": [
     "angular2",
     "webpack",
     "typescript"
   ],
-  "author": "Patrick Stapleton <patrick@angularclass.com>",
-  "homepage": "https://github.com/angularclass/angular2-webpack-starter",
+  "author": "Alex Cole Anderson",
+  "homepage": "https://github.com/andalex/Chroma",
   "license": "MIT",
   "scripts": {
     "dbserve": "nodemon server/server.js",
     "build:aot:prod": "npm run clean:dist && npm run clean:aot && webpack --config config/webpack.prod.js  --progress --profile --bail",
     "build:aot": "npm run build:aot:prod",
-    "cloud-build": "./deploy.sh", 
+    "cloud-build": "./bin/deploy.sh",
+    "cloud-build:prod": "./bin/prod-deploy.sh",
     "build:dev": "npm run clean:dist && webpack --config config/webpack.dev.js --progress --profile",
-    "build:docker": "npm run build:prod && docker build -t angular2-webpack-start:latest .",
     "build:prod": "npm run clean:dist && webpack --config config/webpack.prod.js  --progress --profile --bail",
     "build": "npm run build:dev",
     "ci:aot": "npm run lint && npm run test && npm run build:aot && npm run e2e",
@@ -29,14 +29,10 @@
     "clean:install": "npm set progress=false && npm install",
     "clean:start": "npm start",
     "clean": "npm cache clean && npm run rimraf -- node_modules doc coverage dist compiled",
-    "docker": "docker",
     "docs": "npm run typedoc -- --options typedoc.json --exclude '**/*.spec.ts' ./src/",
     "e2e:live": "npm run e2e -- --elementExplorer",
     "e2e": "npm-run-all -p -r server:prod:ci e2e:only",
     "e2e:only": "npm run protractor",
-    "github-deploy:dev": "webpack --config config/webpack.github-deploy.js --progress --profile --env.githubDev",
-    "github-deploy:prod": "webpack --config config/webpack.github-deploy.js --progress --profile --env.githubProd",
-    "github-deploy": "npm run github-deploy:dev",
     "lint": "npm run tslint \"src/**/*.ts\"",
     "postversion": "git push && git push --tags",
     "prebuild:dev": "npm run clean:dist",
@@ -92,6 +88,7 @@
     "ie-shim": "^0.1.0",
     "jasmine-core": "^2.5.2",
     "material": "^0.1.1",
+    "ngx-clipboard": "^3.0.5",
     "reflect-metadata": "^0.1.9",
     "rxjs": "~5.0.2",
     "webfontloader": "^1.6.27",
@@ -157,13 +154,6 @@
     "webpack-dev-server": "2.2.0-rc.0",
     "webpack-md5-hash": "^0.0.5",
     "webpack-merge": "~2.3.1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/angularclass/angular2-webpack-starter.git"
-  },
-  "bugs": {
-    "url": "https://github.com/angularclass/angular2-webpack-starter/issues"
   },
   "engines": {
     "node": ">= 4.2.1",

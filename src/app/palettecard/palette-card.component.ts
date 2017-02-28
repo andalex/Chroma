@@ -11,7 +11,7 @@ import { CssService } from '../css.service';
 @Component({
   selector: 'palette',
   providers: [FontService, PaletteService, CssService],
-  styleUrls: ['./palette-card.component.css'],
+  styleUrls: ['./palette-card.component.scss'],
   templateUrl: './palette-card.component.html'
 })
 

@@ -4,6 +4,7 @@ import { HttpModule } from '@angular/http';
 
 import { MaterialModule } from '@angular/material';
 import { FlexLayoutModule } from "@angular/flex-layout";
+import { ClipboardModule } from 'ngx-clipboard';
 
 import {EvenOddPipe} from './evenodd.pipe';
 
@@ -95,6 +96,7 @@ export class Safe {
     BrowserModule,
     FormsModule,
     HttpModule,
+    ClipboardModule,
     RouterModule.forRoot(ROUTES, { useHash: true, preloadingStrategy: PreloadAllModules }),
     MaterialModule.forRoot(),
     FlexLayoutModule.forRoot()

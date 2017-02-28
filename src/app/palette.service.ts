@@ -9,19 +9,18 @@ export class PaletteService {
   constructor(private http: Http) {}
 
 
-  private baseUrl: string = 'https://able-painter.gomix.me';
-  private path: string = 'chroma'
+  private baseUrl: string = 'https://able-painter.gomix.me/chroma';
 
-  public getAll(column: string): Observable<Palette> {
-    let requestUrl =  `${this.baseUrl}/${this.path}`;    
-
+  public getAll(): Observable<Palette> {
+    let requestUrl =  this.baseUrl;
+    
     return <Observable<Palette>>this.http.get(requestUrl)
       .map((res) => res.json())
       .catch(this.handleHttpError);
   }
 
     public getOneById(id: string): Observable<Palette> {
-    let requestUrl =  `${this.baseUrl}/${this.path}`;    
+    let requestUrl =  `${this.baseUrl}`;    
 
     return <Observable<Palette>>this.http.get(requestUrl)
       .map((res) => res.json())
