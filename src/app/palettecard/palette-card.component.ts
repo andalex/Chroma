@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 // fonts
 import * as WebFont from 'webfontloader';
@@ -13,6 +13,8 @@ import * as Services from '../services';
 })
 
 export class PaletteCardComponent implements OnInit {
+  @Input()
+  paletteColumn: boolean = true;
 
   constructor(
     private fontService: Services.FontService,
@@ -21,17 +23,23 @@ export class PaletteCardComponent implements OnInit {
     private toggleService: Services.ToggleService,
     private adjustService: Services.AdjustService
   ) { }
+  
 
   public allFonts: Array<any> = [];
   public colorPalettes: any;
 
   public ngOnInit() {
-
+ 
     // request googlefonts api via our font service
     this.fontService.getAll('popularity').subscribe(res => { this.allFonts = res['items'].slice(0, 49) });
 
      // request our palettes from the chroma gomix api
-    this.paletteService.getAll().subscribe(res => { this.colorPalettes = res });
+    this.paletteService.getAll().subscribe(res => {
+    
+        //alternate the colors in the columns
+        let split =  Math.ceil(res.length / 2);
+        this.colorPalettes = this.paletteColumn ? res.splice( 0, split) : res.splice(split, (res.length - 1));
+    });
   }
 
   // cssService using filesaver
