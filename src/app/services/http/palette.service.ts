@@ -11,18 +11,10 @@ export class PaletteService {
 
   private baseUrl: string = 'https://able-painter.gomix.me/chroma';
 
-  public getAll(): Observable<Palette> {
+  public getAll(): Observable<[Palette]> {
     let requestUrl =  this.baseUrl;
     
-    return <Observable<Palette>>this.http.get(requestUrl)
-      .map((res) => res.json())
-      .catch(this.handleHttpError);
-  }
-
-    public getOneById(id: string): Observable<Palette> {
-    let requestUrl =  `${this.baseUrl}`;    
-
-    return <Observable<Palette>>this.http.get(requestUrl)
+    return <Observable<[Palette]>>this.http.get(requestUrl)
       .map((res) => res.json())
       .catch(this.handleHttpError);
   }
