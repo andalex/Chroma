@@ -17,14 +17,13 @@ To run this project:
 
 git clone
 
-npm i
+npm i --save
 
-mongod --dbpath PATH/TO/DB
 
-npm run server:dev;cd server/;npm start
+npm run server:dev;
 
 Browse to localhost:3000 for webpack server
 ```
 
 Please see the [Chroma Server](https://github.com/andalex/Chroma-server "Chroma Server")
-to run the dev server with a local mongo instance -- or just have this repo pull from the gomix api.
+to clone and run the dev server with a local mongo instance, otherwise this project by default points to the palette API on gomix.
