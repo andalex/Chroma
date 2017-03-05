@@ -1,6 +1,6 @@
 # C H R O M A
 
-An interactive tool for selecting font and color pairings and is built with Angular2 and TypeScript.
+An interactive tool for selecting font and color pairings -- built with Angular2 and TypeScript.
 
 - Integrates a custom palette API with google fonts API.
 - Easy quick use (you can just quick copy the @font-face and variables).
