@@ -20,7 +20,7 @@ Browse to localhost:3000 for webpack server
 ```
 
 Please see the [Chroma Server](https://github.com/andalex/Chroma-server "Chroma Server")
-to clone and run the dev server with a local mongo instance, otherwise this project by default points to the palette API on gomix.
+to clone and run the dev server with a local mongo instance, otherwise this project by default points to the palette API on gomix that gets data from the MLab DB.
 
 ## Design updates:
 expanded
