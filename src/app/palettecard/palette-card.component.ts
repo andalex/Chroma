@@ -27,7 +27,6 @@ export class PaletteCardComponent implements OnInit {
 
   public allFonts: Array<any> = [];
   public colorPalettes: Array<any> = [];
-  public data: Array<any> = [];
   public ngOnInit() {
  
     // request googlefonts api via our font service
@@ -35,7 +34,7 @@ export class PaletteCardComponent implements OnInit {
 
      // request our palettes from the chroma gomix api
     this.paletteService.getAll().subscribe(res => {
-        //alternate the colors in the columns
+        //alternate the colors in the co0lumns
         let split =  Math.ceil(res.length / 2);
         this.colorPalettes = this.paletteColumn ? res.splice( 0, split) : res.splice(split, (res.length - 1));
     });
