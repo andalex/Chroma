@@ -7,7 +7,7 @@ import * as FileSaver from "file-saver";
 @Injectable()
 export class CssService {
 
-  private baseUrl: string = 'https://able-painter.gomix.me/chroma';
+  private baseUrl: string = 'http://localhost:8080/chroma';
   constructor(private http: Http) {}
 
   public getCssByPaletteId(id: string, scss: boolean) {
