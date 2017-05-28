@@ -20,17 +20,50 @@
 
       </div>
       <div fxFlex fxLayoutAlign="center center" class="sub-panel-section md-grey-bg">
-        <md-slider
-            [disabled]="disabled"
-            [invert]="invert"
-            [max]="max"
-            [min]="min"
-            [step]="step"
-            [thumb-label]="thumbLabel"
-            [tick-interval]="tickInterval"
-            [value]="value"
-            [vertical]="vertical">
-        </md-slider>
+        <div fxFlex="40%" fxLayout="column">
+            <div fxFlex fxLayout="row" fxLayoutAlign="center center">
+                <div class="color-box"></div>
+            </div>
+            <div fxFlex fxLayout="row" fxLayoutAlign="center center">
+                <span class="font-slider-label">Char.</span>
+            </div>
+            <span class="font-slider-label">Line</span>
+        </div>
+        <div fxFlex="60%" fxLayout="column">
+            <md-slider
+                [disabled]="disabled"
+                [invert]="invert"
+                [max]="max"
+                [min]="min"
+                [step]="step"
+                [thumb-label]="thumbLabel"
+                [tick-interval]="tickInterval"
+                [value]="value"
+                [vertical]="vertical">
+            </md-slider>
+            <md-slider
+                [disabled]="disabled"
+                [invert]="invert"
+                [max]="max"
+                [min]="min"
+                [step]="step"
+                [thumb-label]="thumbLabel"
+                [tick-interval]="tickInterval"
+                [value]="value"
+                [vertical]="vertical">
+            </md-slider>
+            <md-slider
+                [disabled]="disabled"
+                [invert]="invert"
+                [max]="max"
+                [min]="min"
+                [step]="step"
+                [thumb-label]="thumbLabel"
+                [tick-interval]="tickInterval"
+                [value]="value"
+                [vertical]="vertical">
+            </md-slider>
+        </div>
       </div>
     </div>
   </div>
