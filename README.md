@@ -1,24 +1,30 @@
+# C H R O M A
+
+An interactive tool for selecting font and color pairings -- built with Angular2 and TypeScript.
+
+- Integrates a custom palette API with google fonts API.
+- Easy quick use (you can just quick copy the @font-face and variables).
+- More fine grained `css` and `scss` files are generated to be used as a modular component in your web projects.
+
 ```
-- C H R O M A -
-
-Is an interactive palette tool for selecting color and font combinations for web projects.
-
 To run this project:
 
-git clone
+git clone git@github.com:andalex/Chroma.git
 
-npm i
+npm i --save
 
-mongod --dbpath PATH/TO/DB
 
-npm run server:dev;cd server/;npm start
+npm run server:dev;
 
 Browse to localhost:3000 for webpack server
 ```
 
 Please see the [Chroma Server](https://github.com/andalex/Chroma-server "Chroma Server")
-to run the dev server with a local mongo instance -- or just have this repo pull from the gomix api.
+to clone and run the dev server with a local mongo instance, otherwise this project by default points to the palette API on gomix that gets data from the MLab DB.
 
-![chroma-designs](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Chroma designs")
-
+## Design updates:
+expanded
+![desktop-expanded](https://cloud.githubusercontent.com/assets/8305414/23592461/385bbe76-01b6-11e7-94f4-5b2dd196170a.png)
+closed
+![desktop](https://cloud.githubusercontent.com/assets/8305414/23592462/386e162a-01b6-11e7-8d70-45e70c08b533.png)
 
