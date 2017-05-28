@@ -1,0 +1,67 @@
+// SIDE PANEL
+
+//sections
+#side-panel-ui {
+    position: fixed;
+    width: 50%;
+    border-left: 1px solid rgba(170,170,170, .4);
+}
+#top-palette-panel {
+    height: 11vh;
+}
+#selector-strip {
+    height: 3vh;
+    border-bottom: 1px solid rgba(170,170,170, .4); 
+}
+#font-ui-panel {
+    height: 38vh;
+    border-bottom: 1px solid rgba(170,170,170, .4);
+}
+#sample-text-panel {
+    height: 40vh;
+}
+#bottom-expand-panel {
+    height: 8vh;
+    border-top: 1px solid rgba(170,170,170, .4);
+}
+#use-panel-expand {
+    height: 60%;
+    margin: 1rem;
+}
+//panel
+.panel-section {
+  
+}
+.sub-panel-section {
+    height: 100%;
+}
+
+.font-sample-list,
+.font-sample-item {
+    list-style: none;
+    border-bottom: 1px solid rgba(170,170,170, .6);
+}
+#panel-color-select-icon {
+    color: rgba(170,170,170, .6);
+    position: absolute;
+    left: 9%;
+    font-size: 3vh;
+}
+
+
+//sliders
+md-slider {
+    background-color: #F7F7F7;
+}
+.mat-slider-wrapper {
+    background-color: #eeeeee;
+}
+.mat-slider-thumb {
+    background: #d3d3d3;
+}
+.mat-slider-horizontal {
+  width: 100%;
+}
+.mat-slider-track-bakground {
+    background-color: black;
+}

@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
-import { MaterialModule } from '@angular/material';
+import { MdCardModule, MdSliderModule, MdButtonModule } from '@angular/material';
 import { FlexLayoutModule } from "@angular/flex-layout";
 import { ClipboardModule } from 'ngx-clipboard';
 
@@ -29,6 +29,7 @@ import { ROUTES } from './app.routes';
 import { AppComponent } from './app.component';
 import { APP_RESOLVER_PROVIDERS } from './app.resolver';
 import { PaletteCardComponent } from './palettecard';
+import { SidePanelComponent } from './sidepanel';
 import { DropDownComponent } from './dropdown';
 import { NoContentComponent } from './404';
 import {
@@ -81,6 +82,7 @@ export class Safe {
   declarations: [
     AppComponent,
     PaletteCardComponent,
+    SidePanelComponent,
     NoContentComponent,
     DropDownComponent,
     Safe,
@@ -92,9 +94,10 @@ export class Safe {
     HttpModule,
     ClipboardModule,
     RouterModule.forRoot(ROUTES, { useHash: true, preloadingStrategy: PreloadAllModules }),
-    MaterialModule.forRoot(),
+    MdCardModule, MdSliderModule, MdButtonModule,
     FlexLayoutModule.forRoot()
   ],
+  exports: [MdCardModule, MdSliderModule, MdButtonModule],
   providers: [ ENV_PROVIDERS ]
 })
 export class AppModule {
