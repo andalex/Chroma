@@ -2,11 +2,12 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
-import { MdCardModule, MdSliderModule, MdButtonModule } from '@angular/material';
+import { MdCardModule, MdSliderModule, MdButtonModule, MdInputModule, MdSelectModule, MdAutocompleteModule, MdIconModule } from '@angular/material';
 import { FlexLayoutModule } from "@angular/flex-layout";
 import { ClipboardModule } from 'ngx-clipboard';
 
 import {EvenOddPipe} from './evenodd.pipe';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 import 'hammerjs';
 import {
@@ -94,10 +95,11 @@ export class Safe {
     HttpModule,
     ClipboardModule,
     RouterModule.forRoot(ROUTES, { useHash: true, preloadingStrategy: PreloadAllModules }),
-    MdCardModule, MdSliderModule, MdButtonModule,
+    BrowserAnimationsModule,
+    MdCardModule, MdSliderModule, MdButtonModule, MdInputModule, MdSelectModule, MdAutocompleteModule, MdIconModule,
     FlexLayoutModule.forRoot()
   ],
-  exports: [MdCardModule, MdSliderModule, MdButtonModule],
+  exports: [BrowserAnimationsModule, MdCardModule, MdSliderModule, MdButtonModule, MdInputModule, MdSelectModule, MdAutocompleteModule, MdIconModule],
   providers: [ ENV_PROVIDERS ]
 })
 export class AppModule {

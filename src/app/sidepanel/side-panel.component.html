@@ -15,60 +15,110 @@
     </div>
   <div fxFlex fxLayout="row">
     <div class="panel-section" id="font-ui-panel" fxFlex fxLayoutAlign="center center">
-      <div fxFlex fxLayoutAlign="center center" class="sub-panel-section lt-grey-bg">
+      <div fxFlex fxLayout="column" fxLayoutAlign="center center" class="sub-panel-section">
+        <div fxFlex class="font-scrollbox" #scrollMe>
+            <div fxFlex class="font-select" *ngFor="let fontFamily of allFonts; let ii=index" [ngClass]="fontFamily.fontSelected ? 'font-selected': 'font-select'"
+                (click)="selectFont(ii)">
+                <p class="google-font-selector">
+                    {{fontFamily.family}}
+                </p>
+            </div>
+        </div>
+         <form class="font-values-form">
+             
 
+            <md-input-container>
+                <input mdInput placeholder="font" [mdAutocomplete]="auto">
+            </md-input-container>
 
+            <md-autocomplete #auto="mdAutocomplete">
+            <md-option  *ngFor="let fontFamily of allFonts; let ii=index" [value]="fontFamily.family">
+                {{ fontFamily.family }}
+            </md-option>
+            </md-autocomplete>
+        </form>
       </div>
-      <div fxFlex fxLayoutAlign="center center" class="sub-panel-section md-grey-bg">
-        <div fxFlex="40%" fxLayout="column">
-            <div fxFlex fxLayout="row" fxLayoutAlign="center center">
+      <div fxFlex fxLayout="column" fxLayoutAlign="center center" class="sub-panel-section lt-grey-bg">
+            <form class="font-values-form">
+                <table cellspacing="0">
+                <tr>
+                    <td>
+                    <md-input-container>
+                        <input mdInput placeholder="value" value="2">
+                    </md-input-container>
+                    </td>
+                    <td>
+                    <md-input-container>
+                        <input mdInput placeholder="unit" value="em">
+                    </md-input-container>
+                    </td>
+                </tr>
+                </table>
+            </form>
+            <form class="font-values-form">
+                <md-select placeholder="Regular 400" name="food">
+                    <md-option>
+                    Medium 300
+                    </md-option>
+                    <md-option>
+                    Light 200
+                    </md-option>
+                    <md-option>
+                        Thin 10
+                    </md-option>
+                </md-select>
+            </form>
+        <div fxFlex fxLayout="row">
+            <div fxFlex fxLayout="column" fxLayoutAlign="center center">
+                <span>Char.</span>
+                <md-slider
+                    [disabled]="disabled"
+                    [invert]="invert"
+                    [max]="max"
+                    [min]="min"
+                    [step]="step"
+                    [thumb-label]="thumbLabel"
+                    [tick-interval]="tickInterval"
+                    [value]="value"
+                    [vertical]="vertical">
+                </md-slider>
+            </div>
+            <div fxFlex fxLayout="column" fxLayoutAlign="center center">
+                <span>Line</span>
+                <md-slider
+                    [disabled]="disabled"
+                    [invert]="invert"
+                    [max]="max"
+                    [min]="min"
+                    [step]="step"
+                    [thumb-label]="thumbLabel"
+                    [tick-interval]="tickInterval"
+                    [value]="value"
+                    [vertical]="vertical">
+                </md-slider>
+            </div>
+            <div fxFlex fxLayout="column" fxLayoutAlign="center center">
+                <span>OP.</span>
+                <md-slider 
+                    class="opacity-slider"
+                    [disabled]="disabled"
+                    [invert]="invert"
+                    [max]="max"
+                    [min]="min"
+                    [step]="step"
+                    [thumb-label]="thumbLabel"
+                    [tick-interval]="tickInterval"
+                    [value]="value"
+                    [vertical]="vertical">
+                </md-slider>
                 <div class="color-box"></div>
-            </div>
-            <div fxFlex fxLayout="row" fxLayoutAlign="center center">
-                <span class="font-slider-label">Char.</span>
-            </div>
-            <span class="font-slider-label">Line</span>
+            </div>    
         </div>
-        <div fxFlex="60%" fxLayout="column">
-            <md-slider
-                [disabled]="disabled"
-                [invert]="invert"
-                [max]="max"
-                [min]="min"
-                [step]="step"
-                [thumb-label]="thumbLabel"
-                [tick-interval]="tickInterval"
-                [value]="value"
-                [vertical]="vertical">
-            </md-slider>
-            <md-slider
-                [disabled]="disabled"
-                [invert]="invert"
-                [max]="max"
-                [min]="min"
-                [step]="step"
-                [thumb-label]="thumbLabel"
-                [tick-interval]="tickInterval"
-                [value]="value"
-                [vertical]="vertical">
-            </md-slider>
-            <md-slider
-                [disabled]="disabled"
-                [invert]="invert"
-                [max]="max"
-                [min]="min"
-                [step]="step"
-                [thumb-label]="thumbLabel"
-                [tick-interval]="tickInterval"
-                [value]="value"
-                [vertical]="vertical">
-            </md-slider>
-        </div>
-      </div>
+      </div>        
     </div>
   </div>
   <div fxFlex fxLayout="row">
-    <div  class="panel-section lt-grey-bg" id="sample-text-panel" 
+    <div  class="panel-section" id="sample-text-panel" 
           fxFlex 
           fxLayout="column"
           fxLayoutAlign="center start">
@@ -81,6 +131,7 @@
             </li>
             <li class="font-sample-item">
               <p>Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle.</p>
+              <p>I watched the storm, so beautiful yet terrific.</p>
             </li>
             <li class="font-sample-item">
               <p>Legibile +</p>
@@ -89,7 +140,7 @@
     </div>
   </div>
   <div fxFlex fxLayout="row">
-    <div class="panel-section md-grey-bg" id="bottom-expand-panel" fxFlex fxLayoutAlign="end center">
+    <div class="panel-section lt-grey-bg" id="bottom-expand-panel" fxFlex fxLayoutAlign="end center">
       <svg id="use-panel-expand" viewBox="971 747 48 48" version="1.1">
           <polygon id="+" stroke="none" fill="#59606A" fill-rule="evenodd" opacity="0.399999976" points="993.496 781.112 993.496 772.136 985 772.136 985 769.208 993.496 769.208 993.496 761 996.52 761 996.52 769.208 1004.728 769.208 1004.728 772.136 996.52 772.136 996.52 781.112"></polygon>
           <circle id="Oval" stroke="#59606A" stroke-width="2" fill="none" opacity="0.4" cx="995" cy="771" r="23"></circle>

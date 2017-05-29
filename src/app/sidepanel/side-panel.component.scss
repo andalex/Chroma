@@ -34,9 +34,9 @@
 }
 .sub-panel-section {
     height: 100%;
+    padding: 12px;
 }
 
-.font-sample-list,
 .font-sample-item {
     list-style: none;
     border-bottom: 1px solid rgba(170,170,170, .6);
@@ -47,11 +47,16 @@
     left: 9%;
     font-size: 3vh;
 }
-
+.font-scrollbox {
+    overflow-y: scroll;
+    height: 100%;
+    width: 100%;
+    margin-top: 0;
+}
 
 //sliders
 md-slider {
-    background-color: #F7F7F7;
+    margin: 0 12px;
 }
 .mat-slider-wrapper {
     background-color: #eeeeee;
@@ -70,8 +75,17 @@ md-slider {
 }
 .color-box {
     background-color: black;
-    border-radius: 12px;
+    border-radius: 2px;
     height: 36px;
     width: 36px;
-    margin: 12px;
+    margin: 12px 12px 0 12px;
+}
+.opacity-slider {
+    min-height: 78px;
+}
+md-select {
+    width: 100%;
+}
+.font-values-form, md-input-container {
+    min-width: 100%;
 }

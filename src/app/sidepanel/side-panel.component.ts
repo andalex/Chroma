@@ -30,16 +30,16 @@ export class SidePanelComponent implements OnInit {
   public activePalette: Object = {};
 
   //slider config test
-  public autoTicks:Boolean = false;
+  public autoTicks:Boolean = true;
   public disabled:Boolean = false;
   public invert:Boolean = false;
   public max:Number = 100;
   public min:Number = 0;
-  public showTicks:Boolean = false;
+  public showTicks:Boolean = true;
   public step:Number = 1;
-  public thumbLabel:Boolean = false;
+  public thumbLabel:Boolean = true;
   public value:Number = 0;
-  public vertical:Boolean = false;
+  public vertical:Boolean = true;
 
   public ngOnInit() {
  
